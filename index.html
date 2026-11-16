@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMO START-UP • Smart QR Vehicle Contact Stickers for India</title>
+  <meta name="description" content="Anyone can reach you. Your number stays hidden. The smart QR vehicle contact sticker built for Indian roads. Masked WhatsApp & voice relay.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="DEMO START-UP Home">
+        <div class="brand-badge">
+          <svg class="shield-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+            <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#FBF6EE"/>
+            <rect x="9.5" y="9.5" width="5" height="5" fill="#FF6B4A" rx="1"/>
+          </svg>
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="buy.html" class="nav-link" data-i18n="nav_buy">Buy Shield</a></li>
+          <li><a href="scan.html" class="nav-link" data-i18n="nav_scanner">Scanner Demo</a></li>
+          <li><a href="wholesale.html" class="nav-link" data-i18n="nav_wholesale">Wholesale</a></li>
+          <li><a href="partner.html" class="nav-link" data-i18n="nav_partner">Partner</a></li>
+          <li><a href="guide.html" class="nav-link" data-i18n="nav_guide">Guide</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Language Pill -->
+        <button type="button" class="lang-pill-btn" id="lang-sheet-trigger" aria-label="Select Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="current-lang-text">Eng</span>
+        </button>
+
+        <a href="login.html" class="btn btn-outline btn-sm header-login-btn" data-i18n="nav_login">Login</a>
+        <a href="buy.html" class="btn btn-cta btn-sm" style="display:none;" id="header-buy-cta">Get Shield</a>
+        <button id="bg-toggle-btn" class="btn btn-outline btn-sm" aria-label="Change Background Color">🎨</button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-badge">
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+        <button type="button" id="close-drawer-btn" aria-label="Close Navigation" style="background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link active"><span>🏠</span> Home</a></li>
+        <li><a href="buy.html" class="drawer-link"><span>🛡️</span> Buy Vehicle Shield</a></li>
+        <li><a href="scan.html" class="drawer-link"><span>📱</span> Scanner Demo</a></li>
+        <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Owner Dashboard</a></li>
+        <li><a href="wholesale.html" class="drawer-link"><span>🏢</span> Wholesale & Societies</a></li>
+        <li><a href="partner.html" class="drawer-link"><span>🤝</span> Partner Program</a></li>
+        <li><a href="guide.html" class="drawer-link"><span>📖</span> User Guide & Care</a></li>
+        <li><a href="blog.html" class="drawer-link"><span>✍️</span> Blog & Insights</a></li>
+        <li><a href="contact.html" class="drawer-link"><span>📞</span> Contact Support</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="login.html" class="btn btn-outline btn-block">Owner Login</a>
+        <a href="buy.html" class="btn btn-cta btn-block">Get Shield • ₹499</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Selection Bottom Sheet -->
+  <div class="bottom-sheet-backdrop" id="lang-bottom-sheet" role="dialog" aria-modal="true" aria-label="Choose Language">
+    <div class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 style="font-size:18px;">Choose Language</h3>
+        <button type="button" id="close-lang-sheet" style="font-size:20px; color:var(--text-muted); cursor:pointer;">&times;</button>
+      </div>
+      <div class="language-options-grid">
+        <button type="button" class="lang-option-btn selected" data-lang="en">
+          <div>
+            <div class="lang-title">English</div>
+            <div class="lang-sub">Default Interface</div>
+          </div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="hi">
+          <div>
+            <div class="lang-title">हिन्दी (Hindi)</div>
+            <div class="lang-sub">भारतीय भाषाओं में अलर्ट</div>
+          </div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="gu">
+          <div>
+            <div class="lang-title">ગુજરાતી (Gujarati)</div>
+            <div class="lang-sub">સ્થાનિક ભાષા સપોર્ટ</div>
+          </div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="ta">
+          <div>
+            <div class="lang-title">தமிழ் (Tamil)</div>
+            <div class="lang-sub">பிராந்திய மொழி ஆதரவு</div>
+          </div>
+          <span>✔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Text Content -->
+          <div class="hero-content">
+            <div class="hero-badges-row">
+              <span class="sticker-badge badge-teal" data-i18n="badge_privacy">100% Privacy Protected</span>
+              <span class="sticker-badge badge-sand tilt-right" data-i18n="badge_aligned">DPDP Act 2023 Aligned</span>
+              <span class="sticker-badge badge-coral" data-i18n="badge_shield">Verified Vehicle Shield</span>
+            </div>
+
+            <h1 class="hero-title" data-i18n="hero_title">
+              Anyone can reach you. <span>Your number stays hidden.</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+              The smart QR vehicle contact sticker built for Indian roads. Strangers alert you for blocking, lights, towing, or medical emergencies via masked WhatsApp & voice relay.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="buy.html" class="btn btn-cta" data-i18n="cta_get_shield">
+                Get Your Vehicle Shield • ₹499
+              </a>
+              <a href="scan.html" class="btn btn-outline" data-i18n="cta_try_scanner">
+                Try Scanner Live
+              </a>
+            </div>
+
+            <div class="trust-row">
+              <span class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A7261" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero App Download Needed
+              </span>
+              <span class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A7261" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Free Delivery Across India
+              </span>
+              <span class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A7261" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Works with Any Phone Camera
+              </span>
+            </div>
+
+            <!-- "Try It Yourself" Simulated Scan Banner -->
+            <div class="simulated-scan-box">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4v4H4zM16 4h4v4h-4zM4 16h4v4H4zM16 16h4v4h-4z"></path></svg>
+                Try It Yourself • Live Simulated Scan
+              </h4>
+              <p style="font-size:13px; margin-bottom:12px;">Experience what a person sees when scanning your vehicle sticker:</p>
+              <a href="scan.html" class="btn btn-sand btn-sm">Open Simulated Scanner Screen &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Right Hero Illustration -->
+          <div class="hero-visual">
+            <div class="hero-visual-card">
+              <img src="assets/hero-car-qr.svg" alt="Tactile QR vehicle contact sticker affixed on a modern car windshield in India" width="520" height="364">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: HOW DEMO START-UP PROTECTS YOU (3 Steps) -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Simple 3-Step Protection</span>
+          <h2>How DEMO START-UP Protects You</h2>
+          <p>No complicated apps, no phone number exposure on car windshields, and no harassment.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-badge">1</div>
+            <h3>Stick It On</h3>
+            <p>Affix the weather-sealed vinyl decal to your front and rear windshields in under 30 seconds using the pre-applied industrial 3M automotive adhesive.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">2</div>
+            <h3>They Scan</h3>
+            <p>When someone needs you to move your car or spots open windows, they scan your tag with any standard smartphone camera. No app download required.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">3</div>
+            <h3>You Get Alerted</h3>
+            <p>Receive an instantaneous masked WhatsApp message or an automated private relay call. Your personal mobile number remains 100% confidential.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY STRANGERS SCAN YOUR TAG -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Instant Resolution</span>
+          <h2>Why Strangers Scan Your Tag</h2>
+          <p>Solve everyday Indian street and parking problems quickly and peacefully.</p>
+        </div>
+
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path></svg>
+            </div>
+            <div>
+              <h4>Car is Blocking</h4>
+              <p>Double parked or blocked society gate? Get notified politely before security honks or tows.</p>
+            </div>
+          </div>
+
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+            </div>
+            <div>
+              <h4>Lights / Window Open</h4>
+              <p>Save battery drain and protect against sudden monsoon showers when a window is accidentally left cracked.</p>
+            </div>
+          </div>
+
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div>
+              <h4>Towing Alert</h4>
+              <p>Receive immediate alerts if traffic police or municipal cranes arrive in your parking lane.</p>
+            </div>
+          </div>
+
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+            </div>
+            <div>
+              <h4>Minor Dent / Touch</h4>
+              <p>Resolve parking lot scrapes amicably without road rage or awkward public shouting matches.</p>
+            </div>
+          </div>
+
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </div>
+            <div>
+              <h4>Alarm Ringing</h4>
+              <p>Be informed right away if your car anti-theft siren is disturbing the neighborhood.</p>
+            </div>
+          </div>
+
+          <div class="reason-card">
+            <div class="reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div>
+              <h4>Other Civics Inquiry</h4>
+              <p>Society gate passes, kid's ball under tire, or general neighborly notices without revealing numbers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: EMERGENCY SOS & PARAMEDIC CARD -->
+    <section class="section section-ivory">
+      <div class="container">
+        <div class="sos-card-featured">
+          <div class="sos-badge-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polygon points="12 2 2 22 22 22"></polygon></svg>
+            Critical Emergency & Medical Responder Protocol
+          </div>
+          <h2 style="color:var(--text); margin-bottom:10px;">When Every Second Counts: Crash & Medical SOS</h2>
+          <p style="color:var(--text-muted); font-size:15px; max-width:720px;">
+            In case of an unfortunate highway accident or medical crisis, good samaritans and first responders scanning your tag can trigger an instantaneous SOS broadcast to your 3 chosen emergency contacts and view vital paramedic details.
+          </p>
+
+          <div class="paramedic-details-grid">
+            <div class="paramedic-field">
+              <span class="label">Paramedic Blood Group</span>
+              <span class="value">B+ (Positive)</span>
+            </div>
+            <div class="paramedic-field">
+              <span class="label">Known Medical Allergies</span>
+              <span class="value">Penicillin, Sulfa Drugs</span>
+            </div>
+            <div class="paramedic-field">
+              <span class="label">Preferred Hospital</span>
+              <span class="value">Lilavati Hospital, Mumbai</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+            <a href="scan.html" class="btn btn-sos btn-sm">
+              View Sample Emergency Protocol &rarr;
+            </a>
+            <span style="font-size:13px; color:var(--text-muted); font-weight:600;">
+              Requires secondary 2-step confirmation to eliminate false alarms.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY PAPER NOTES FAIL YOU (Comparison Table) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">The Security Gap</span>
+          <h2>Why Paper Notes Fail You</h2>
+          <p>Writing your phone number on paper cards invites identity leaks, stalking, and marketing spam.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width:34%;">Feature / Threat</th>
+                <th style="width:33%;">Paper Note on Dashboard</th>
+                <th style="width:33%; color:var(--primary);">DEMO START-UP Shield</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mobile Number Privacy</strong></td>
+                <td><span class="status-cross">✖ Exposed to everyone</span></td>
+                <td><span class="status-check">✔ 100% Masked Virtual Relay</span></td>
+              </tr>
+              <tr>
+                <td><strong>Harassment & Stalking Protection</strong></td>
+                <td><span class="status-cross">✖ High Risk (Number harvest)</span></td>
+                <td><span class="status-check">✔ Zero Exposure Guaranteed</span></td>
+              </tr>
+              <tr>
+                <td><strong>Monsoon & Rain Durability</strong></td>
+                <td><span class="status-cross">✖ Ink smudges & paper rots</span></td>
+                <td><span class="status-check">✔ IP68 Waterproof Decal</span></td>
+              </tr>
+              <tr>
+                <td><strong>Emergency SOS & Paramedic Info</strong></td>
+                <td><span class="status-cross">✖ None</span></td>
+                <td><span class="status-check">✔ Blood group & 3 SOS contacts</span></td>
+              </tr>
+              <tr>
+                <td><strong>DPDP Act 2023 Alignment</strong></td>
+                <td><span class="status-cross">✖ Non-compliant storage</span></td>
+                <td><span class="status-check">✔ DPDP Act 2023 Aligned</span></td>
+              </tr>
+              <tr>
+                <td><strong>Night DND Mode</strong></td>
+                <td><span class="status-cross">✖ Anyone can call 2 AM</span></td>
+                <td><span class="status-check">✔ 11 PM–7 AM Smart Filter</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CHOOSE YOUR VEHICLE SHIELD (Pricing) -->
+    <section class="section section-cream" id="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Honest Civic Pricing</span>
+          <h2>Choose Your Vehicle Shield</h2>
+          <p>Transparent pricing with zero hidden subscription fees. Free doorstep shipping across India.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1: Digital E-Tag -->
+          <div class="pricing-card">
+            <span class="sticker-badge badge-sand" style="align-self:flex-start;">Instant PDF</span>
+            <h3 style="margin-top:10px;">Digital E-Tag</h3>
+            <p>Immediate high-resolution printable QR code for emergency backup.</p>
+            <div class="price-display">
+              <span class="price-amount">₹199</span>
+              <span class="price-strike">₹399</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Instant PDF email download
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Masked WhatsApp Alert Relay
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Print on your own vinyl or paper
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full Owner Dashboard access
+              </li>
+            </ul>
+            <a href="buy.html" class="btn btn-outline btn-block">Choose E-Tag</a>
+          </div>
+
+          <!-- Card 2: Physical Twin Pack (Most Popular) -->
+          <div class="pricing-card featured">
+            <span class="popular-ribbon">Most Popular</span>
+            <span class="sticker-badge badge-teal" style="align-self:flex-start;">Free Shipping</span>
+            <h3 style="margin-top:10px;">Physical Twin Pack</h3>
+            <p>Two industrial-grade vinyl decals for your front and rear car glass.</p>
+            <div class="price-display">
+              <span class="price-amount">₹499</span>
+              <span class="price-strike">₹999</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                2x Premium Weatherproof Decals
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Genuine 3M Automotive Backing
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Free India-wide SpeedPost delivery
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                3-Contact Emergency SOS & Paramedic
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                15% bulk discount on 2+ packs
+              </li>
+            </ul>
+            <a href="buy.html" class="btn btn-cta btn-block">Order Twin Pack • ₹499</a>
+          </div>
+
+          <!-- Card 3: Bike & Helmet Dual Pack -->
+          <div class="pricing-card">
+            <span class="sticker-badge badge-sand" style="align-self:flex-start;">Two-Wheeler Special</span>
+            <h3 style="margin-top:10px;">Bike & Helmet Pack</h3>
+            <p>Compact UV-cured micro tags designed for motorbikes, scooters, and riding helmets.</p>
+            <div class="price-display">
+              <span class="price-amount">₹349</span>
+              <span class="price-strike">₹699</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                1x Visor/Tank Decal + 1x Helmet Tag
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Curved surface high-tack adhesive
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Crash Paramedic SOS Broadcast
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Free Delivery Across India
+              </li>
+            </ul>
+            <a href="buy.html" class="btn btn-outline btn-block">Order Bike Pack</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: BUILT FOR INDIAN ROADS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Field Tested</span>
+          <h2>Built for Indian Roads</h2>
+          <p>Engineered to withstand scorching summer asphalt, heavy coastal monsoon downpours, and intense pressure washing.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <img src="assets/weather-monsoon.svg" alt="Monsoon Waterproof Protection" width="44" height="44">
+            </div>
+            <div>
+              <h4>Monsoon Waterproof (IP68)</h4>
+              <p>Special laminated top seal ensures the QR code remains scannable even during heavy Mumbai or Kerala rainstorms.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <img src="assets/weather-heat.svg" alt="UV and 50°C Heat Resistance" width="44" height="44">
+            </div>
+            <div>
+              <h4>50°C Heat & UV Resistant</h4>
+              <p>Will not yellow, curl, or peel off under direct Delhi or Rajasthan peak summer sun exposure.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <img src="assets/weather-pressure.svg" alt="Commercial Pressure Wash Tested" width="44" height="44">
+            </div>
+            <div>
+              <h4>Pressure-Wash Tested</h4>
+              <p>Stays permanently bonded during high-pressure jet washes at detailing studios and service centers.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <h4>DPDP Act 2023 Aligned</h4>
+              <p>Follows India's Digital Personal Data Protection guidelines. Data is stored on Indian soil with zero number harvesting.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <div>
+              <h4>Zero App Required</h4>
+              <p>Any iPhone, Android, GPay, or Paytm camera can scan and send an alert in less than 5 seconds.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F4C5C" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <h4>Masked Voice Relay</h4>
+              <p>For urgent alerts, callers are connected via a cloud exchange without either party discovering the other's real digits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LOVED ACROSS INDIA (Reviews) -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Sample Community Feedback</span>
+          <h2>Loved Across Indian Neighborhoods</h2>
+          <p>Real experiences from daily commuters, residential society members, and car owners.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="reviewer-meta">
+              <img src="assets/avatar-rajesh.svg" alt="Rajesh K. avatar" class="reviewer-avatar" width="48" height="48">
+              <div class="reviewer-info">
+                <h4>Rajesh K.</h4>
+                <p>Hyundai Creta • Mumbai</p>
+              </div>
+            </div>
+            <div class="stars-rating">★★★★★</div>
+            <p>"I used to stick a business card on my dash in Bandra. Got random spam calls weekly. With DEMO START-UP, I got notified twice when double parked without any spam."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-meta">
+              <img src="assets/avatar-priya.svg" alt="Priya Sharma avatar" class="reviewer-avatar" width="48" height="48">
+              <div class="reviewer-info">
+                <h4>Priya Sharma</h4>
+                <p>Kia Seltos • Bengaluru</p>
+              </div>
+            </div>
+            <div class="stars-rating">★★★★★</div>
+            <p>"As a woman driving alone in Bangalore, I hated leaving my phone number visible to strangers. This privacy sticker gives total peace of mind in mall parking."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-meta">
+              <img src="assets/avatar-vikram.svg" alt="Vikram S. avatar" class="reviewer-avatar" width="48" height="48">
+              <div class="reviewer-info">
+                <h4>Vikram S.</h4>
+                <p>Society Secretary • Pune</p>
+              </div>
+            </div>
+            <div class="stars-rating">★★★★★</div>
+            <p>"We mandated DEMO START-UP stickers for all 240 flats in our gated society. Visitor parking conflicts and gate blocking arguments dropped by 90%."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-meta">
+              <img src="assets/avatar-ananya.svg" alt="Dr. Ananya Sen avatar" class="reviewer-avatar" width="48" height="48">
+              <div class="reviewer-info">
+                <h4>Dr. Ananya Sen</h4>
+                <p>Honda City • New Delhi</p>
+              </div>
+            </div>
+            <div class="stars-rating">★★★★★</div>
+            <p>"The emergency paramedic SOS card is brilliant. Knowing my blood group and husband's number are accessible if there's an emergency is priceless."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FAQ ACCORDION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Questions Answered</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our smart vehicle shields and privacy protection.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Does someone scanning the sticker need an app?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>No app is required at all. Any standard smartphone camera, Google Lens, WhatsApp QR scanner, or payment app (Paytm/GPay) opens the secure contact screen in 2 seconds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How does my phone number remain hidden?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>The scanner interacts solely with our secure cloud relay. WhatsApp messages and calls are routed through our verified business server. The person scanning only sees your vehicle make and masked plate (e.g. MH 02 ▪▪ 8820).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What if someone scans the tag repeatedly as spam?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>We enforce automated rate-limiting, vehicle icon human verification, and IP-level throttling. You cannot receive more than one notification from the same device within 5 minutes, preventing harassment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Will the sticker peel off or fade in the monsoon rain?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>No. Our decals use industrial 3M automotive adhesive with UV-resistant ink and an IP68 waterproof laminate. They survive harsh Indian monsoons, 50°C heatwaves, and commercial pressure washes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can I use the same tag if I change my car?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>Physical tags are permanently laser-registered to a specific license plate during shipping to prevent vehicle fraud. If you change your car, simply order a fresh replacement pack with your new plate number.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="section section-sand" style="text-align:center;">
+      <div class="container" style="max-width:720px;">
+        <span class="sticker-badge badge-coral">Ready for Peace of Mind?</span>
+        <h2 style="margin:16px 0 12px 0;">Protect Your Car and Your Family's Mobile Number Today</h2>
+        <p style="margin-bottom:28px;">Join thousands of conscientious Indian motorists who keep their numbers safe from street scraping and harassment.</p>
+        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a href="buy.html" class="btn btn-cta">Get Your Shield • ₹499</a>
+          <a href="scan.html" class="btn btn-outline">Explore Scanner Demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-badge" style="align-self:flex-start;">
+            <span class="brand-text">DEMO <span>START-UP</span></span>
+          </div>
+          <p>The privacy-first smart QR vehicle contact system for India. Ensuring respectful community communication without exposing personal mobile numbers.</p>
+          <div style="font-size:13px; color:var(--text); font-weight:700;">
+            Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+            Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a><br>
+            Support Hours: 8:00 AM – 11:00 PM (All 7 Days)
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Vehicle Shield</h4>
+          <ul class="footer-links-list">
+            <li><a href="buy.html">Order Twin Pack (₹499)</a></li>
+            <li><a href="buy.html">Instant Digital E-Tag (₹199)</a></li>
+            <li><a href="buy.html">Bike & Helmet Pack (₹349)</a></li>
+            <li><a href="scan.html">Simulated QR Scanner</a></li>
+            <li><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Enterprise & Civics</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html">Wholesale Society Packs</a></li>
+            <li><a href="partner.html">Auto Workshop Partner</a></li>
+            <li><a href="guide.html">Installation & Care Guide</a></li>
+            <li><a href="blog.html">Blog & Civic Safety</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Privacy & Legal</h4>
+          <ul class="footer-links-list">
+            <li><span class="status-check">✔ DPDP Act 2023 Aligned</span></li>
+            <li><a href="contact.html">Data Protection Officer</a></li>
+            <li><a href="guide.html">Anti-Harassment Shield</a></li>
+            <li><a href="login.html">Access My Vehicle Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DEMO START-UP. All rights reserved. Made for Indian roads.</div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating "Need help?" WhatsApp Chip -->
+  <a href="https://wa.me/919316549161" class="floating-whatsapp-chip" target="_blank" rel="noopener noreferrer" aria-label="Chat with Support on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.581 1.761.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.766-5.767-5.766zm10.17 5.766c0 5.631-4.57 10.201-10.201 10.201-1.787 0-3.483-.464-4.965-1.278l-5.035 1.319 1.344-4.912c-.89-1.533-1.344-3.287-1.344-5.33 0-5.631 4.57-10.201 10.201-10.201 5.631 0 10.2 4.57 10.2 10.201z"/></svg>
+    <span data-i18n="need_help">Need help?</span>
+  </a>
+
+  <!-- Mobile Bottom Tab Bar (Screens < 640px) -->
+  <nav class="mobile-tab-bar" aria-label="Mobile Bottom Bar">
+    <a href="partner.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Partner</span>
+    </a>
+    <a href="wholesale.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Wholesale</span>
+    </a>
+    <a href="blog.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Stories</span>
+    </a>
+    <a href="buy.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Orders</span>
+    </a>
+    <a href="dashboard.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Dashboard</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

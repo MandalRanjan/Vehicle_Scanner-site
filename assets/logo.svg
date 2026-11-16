@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" role="img" aria-label="DEMO START-UP Logo">
+  <defs>
+    <filter id="sticker-shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="0" flood-color="#1E2A32" flood-opacity="0.14" />
+    </filter>
+  </defs>
+  <!-- Sticker badge background -->
+  <g transform="rotate(-1.5 120 25)" filter="url(#sticker-shadow)">
+    <rect x="3" y="4" width="234" height="40" rx="10" fill="#FBF6EE" stroke="#0F4C5C" stroke-width="2" />
+    
+    <!-- Mini Shield Icon -->
+    <g transform="translate(14, 12)">
+      <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+      <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#F5EDE0"/>
+      <!-- QR mini glyph -->
+      <rect x="9" y="8" width="6" height="6" fill="#0F4C5C" rx="1"/>
+      <rect x="10.5" y="9.5" width="3" height="3" fill="#FF6B4A"/>
+    </g>
+
+    <!-- Typography -->
+    <text x="44" y="29" font-family="'Sora', 'Segoe UI', sans-serif" font-size="16" font-weight="800" fill="#0F4C5C" letter-spacing="0.5">
+      DEMO <tspan fill="#FF6B4A">START-UP</tspan>
+    </text>
+    
+    <!-- Micro dot seal -->
+    <circle cx="218" cy="24" r="3.5" fill="#2A7261" />
+  </g>
+</svg>

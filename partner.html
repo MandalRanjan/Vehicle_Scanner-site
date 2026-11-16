@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Program • DEMO START-UP Auto Network</title>
+  <meta name="description" content="Earn up to 25% commission as an authorized DEMO START-UP retail partner. Tailored for auto workshops, car washes, detailing studios, and accessories shops.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="DEMO START-UP Home">
+        <div class="brand-badge">
+          <svg class="shield-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+            <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#FBF6EE"/>
+            <rect x="9.5" y="9.5" width="5" height="5" fill="#FF6B4A" rx="1"/>
+          </svg>
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="buy.html" class="nav-link" data-i18n="nav_buy">Buy Shield</a></li>
+          <li><a href="scan.html" class="nav-link" data-i18n="nav_scanner">Scanner Demo</a></li>
+          <li><a href="wholesale.html" class="nav-link" data-i18n="nav_wholesale">Wholesale</a></li>
+          <li><a href="partner.html" class="nav-link active" data-i18n="nav_partner">Partner</a></li>
+          <li><a href="guide.html" class="nav-link" data-i18n="nav_guide">Guide</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="lang-pill-btn" id="lang-sheet-trigger" aria-label="Select Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="current-lang-text">Eng</span>
+        </button>
+
+        <a href="login.html" class="btn btn-outline btn-sm header-login-btn" data-i18n="nav_login">Login</a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-badge">
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+        <button type="button" id="close-drawer-btn" aria-label="Close Navigation" style="background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span>🏠</span> Home</a></li>
+        <li><a href="buy.html" class="drawer-link"><span>🛡️</span> Buy Vehicle Shield</a></li>
+        <li><a href="scan.html" class="drawer-link"><span>📱</span> Scanner Demo</a></li>
+        <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Owner Dashboard</a></li>
+        <li><a href="wholesale.html" class="drawer-link"><span>🏢</span> Wholesale & Societies</a></li>
+        <li><a href="partner.html" class="drawer-link active"><span>🤝</span> Partner Program</a></li>
+        <li><a href="guide.html" class="drawer-link"><span>📖</span> User Guide & Care</a></li>
+        <li><a href="blog.html" class="drawer-link"><span>✍️</span> Blog & Insights</a></li>
+        <li><a href="contact.html" class="drawer-link"><span>📞</span> Contact Support</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="login.html" class="btn btn-outline btn-block">Owner Login</a>
+        <a href="buy.html" class="btn btn-cta btn-block">Get Shield • ₹499</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Selection Bottom Sheet -->
+  <div class="bottom-sheet-backdrop" id="lang-bottom-sheet" role="dialog" aria-modal="true" aria-label="Choose Language">
+    <div class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 style="font-size:18px;">Choose Language</h3>
+        <button type="button" id="close-lang-sheet" style="font-size:20px; color:var(--text-muted); cursor:pointer;">&times;</button>
+      </div>
+      <div class="language-options-grid">
+        <button type="button" class="lang-option-btn selected" data-lang="en">
+          <div><div class="lang-title">English</div><div class="lang-sub">Default Interface</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="hi">
+          <div><div class="lang-title">हिन्दी (Hindi)</div><div class="lang-sub">भारतीय भाषाओं में अलर्ट</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="gu">
+          <div><div class="lang-title">ગુજરાતી (Gujarati)</div><div class="lang-sub">સ્થાનિક ભાષા સપોર્ટ</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="ta">
+          <div><div class="lang-title">தமிழ் (Tamil)</div><div class="lang-sub">பிராந்திய மொழி ஆதரவு</div></div>
+          <span>✔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div style="text-align:center; max-width:760px; margin:0 auto;">
+          <div style="display:flex; justify-content:center; gap:8px; margin-bottom:12px;">
+            <span class="sticker-badge badge-coral">Up to 25% High Margin Commission</span>
+            <span class="sticker-badge badge-teal">Zero Inventory Risk</span>
+          </div>
+          <h1 style="font-size:36px; line-height:44px; margin-bottom:14px;">
+            Monetize Every Vehicle That Enters Your Auto Space
+          </h1>
+          <p style="font-size:16px; line-height:26px; color:var(--text-muted); margin-bottom:24px;">
+            Partner with DEMO START-UP. Provide vehicle safety and phone privacy stickers to your customers. High-conversion retail counter display kits with instant weekly bank payouts.
+          </p>
+          <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a href="#partner-form-section" class="btn btn-cta">Join Partner Network &rarr;</a>
+            <a href="#profit-simulator-section" class="btn btn-outline">Calculate My Earnings</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFIT SIMULATOR SLIDER -->
+    <section class="section section-cream" id="profit-simulator-section">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Transparent Calculator</span>
+          <h2>Partner Profit Simulator</h2>
+          <p>Drag the slider to calculate your estimated monthly and annual revenue.</p>
+        </div>
+
+        <div class="card card-white" style="border:1.5px solid var(--border-card); padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+            <span style="font-size:14px; font-weight:700; color:var(--text);">Tags Sold Per Month:</span>
+            <span id="slider-tags-val" style="font-family:var(--font-display); font-size:24px; font-weight:800; color:var(--primary);">80 Tags</span>
+          </div>
+
+          <!-- Interactive Range Slider -->
+          <input type="range" id="tags-slider" min="10" max="400" step="10" value="80" style="width:100%; height:8px; background:var(--bg-sand); border-radius:4px; outline:none; accent-color:var(--primary); cursor:pointer; margin-bottom:24px;">
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; padding-top:20px; border-top:1px solid var(--border-subtle); text-align:center;">
+            <div style="background:var(--bg-cream); padding:16px; border-radius:var(--radius-md);">
+              <span style="font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Commission Tier</span>
+              <div id="slider-commission-rate" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--text); margin-top:4px;">20% Commission</div>
+            </div>
+
+            <div style="background:var(--bg-cream); padding:16px; border-radius:var(--radius-md);">
+              <span style="font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Monthly Payout</span>
+              <div id="slider-monthly-earnings" style="font-family:var(--font-display); font-size:24px; font-weight:800; color:var(--cta); margin-top:4px;">₹7,984</div>
+            </div>
+
+            <div style="background:var(--bg-cream); padding:16px; border-radius:var(--radius-md);">
+              <span style="font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Annual Payout + Bonus</span>
+              <div id="slider-annual-earnings" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--success); margin-top:4px;">₹95,808/yr</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAILORED FOR HIGH-TRAFFIC AUTO SPACES TILES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Ideal Spaces</span>
+          <h2>Tailored for High-Traffic Auto Spaces</h2>
+          <p>Every driver visiting your business is a natural customer for privacy and windshield protection.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🔧</span></div>
+            <div>
+              <h4>Auto Workshops & Garages</h4>
+              <p>Upsell during regular servicing. Customers love leaving with an active privacy shield.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🚿</span></div>
+            <div>
+              <h4>Detailers & Car Washes</h4>
+              <p>Clean glass is the perfect surface for instant application right after premium washing.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🏢</span></div>
+            <div>
+              <h4>Residential RWA Societies</h4>
+              <p>Solve visitor parking conflicts and gate blocking across hundreds of apartment residents.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🚗</span></div>
+            <div>
+              <h4>Driving Schools</h4>
+              <p>Provide new drivers with safety stickers for emergency paramedic SOS protection.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🛡️</span></div>
+            <div>
+              <h4>Insurance Brokers & Agents</h4>
+              <p>A tangible physical gift that enhances policyholder loyalty and safety consciousness.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">📻</span></div>
+            <div>
+              <h4>Car Accessories Shops</h4>
+              <p>Perfect checkout counter impulse buy with guaranteed 1-minute QR activation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE 4-STEP PARTNER PROCESS -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">How It Works</span>
+          <h2>Simple 4-Step Partnership</h2>
+          <p>Start retailing within 48 hours with zero technical integration.</p>
+        </div>
+
+        <div class="steps-grid" style="grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));">
+          <div class="step-card">
+            <div class="step-badge">1</div>
+            <h3>Apply Online</h3>
+            <p>Fill out the short verification form below with your business details and GST/shop registration.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">2</div>
+            <h3>Receive Starter Kit</h3>
+            <p>We courier an acrylic counter display stand, 50 starter packs, and demo QR scanner brochures.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">3</div>
+            <h3>Sell & Activate</h3>
+            <p>Customer scans your partner code to activate on their phone in 30 seconds. No paperwork needed.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">4</div>
+            <h3>Weekly Direct Payouts</h3>
+            <p>Commissions are credited automatically every Tuesday directly to your registered business UPI/Bank account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN THE DEMO START-UP NETWORK FORM -->
+    <section class="section" id="partner-form-section">
+      <div class="container" style="max-width:720px;">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Partner Application</span>
+          <h2>Join the DEMO START-UP Network</h2>
+          <p>Submit your interest below. Our merchant onboarding team will get back to you within 2 hours.</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="card card-cream" style="border:1.5px solid var(--border-card); padding:32px;">
+          <form id="partner-application-form">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="partner-name" class="form-label"><span>Applicant Full Name *</span></label>
+              <input type="text" id="partner-name" class="form-control" placeholder="Vikram Patel" required>
+            </div>
+
+            <!-- Business Name -->
+            <div class="form-group">
+              <label for="partner-business" class="form-label"><span>Business / Workshop Name *</span></label>
+              <input type="text" id="partner-business" class="form-control" placeholder="Apex Auto Detailing Studio" required>
+            </div>
+
+            <!-- Business Type Chips -->
+            <div class="form-group">
+              <label class="form-label"><span>Business Classification *</span></label>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <button type="button" class="partner-type-chip btn btn-sand btn-sm selected" data-type="Auto Workshop">Auto Workshop / Garage</button>
+                <button type="button" class="partner-type-chip btn btn-sand btn-sm" data-type="Car Wash">Car Wash / Detailing</button>
+                <button type="button" class="partner-type-chip btn btn-sand btn-sm" data-type="RWA Society">Residential RWA</button>
+                <button type="button" class="partner-type-chip btn btn-sand btn-sm" data-type="Accessories Shop">Accessories Store</button>
+                <button type="button" class="partner-type-chip btn btn-sand btn-sm" data-type="Other">Other Auto Business</button>
+              </div>
+            </div>
+
+            <!-- City & State -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="partner-city" class="form-label"><span>City *</span></label>
+                <input type="text" id="partner-city" class="form-control" placeholder="Ahmedabad" required>
+              </div>
+              <div class="form-group">
+                <label for="partner-state" class="form-label"><span>State *</span></label>
+                <input type="text" id="partner-state" class="form-control" placeholder="Gujarat" required>
+              </div>
+            </div>
+
+            <!-- WhatsApp & Email -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="partner-phone" class="form-label"><span>WhatsApp Number *</span></label>
+                <div class="phone-input-group">
+                  <span class="phone-prefix">🇮🇳 +91</span>
+                  <input type="tel" id="partner-phone" class="form-control" placeholder="98765 43210" maxlength="10" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="partner-email" class="form-label"><span>Business Email *</span></label>
+                <input type="email" id="partner-email" class="form-control" placeholder="contact@apexstudio.in" required>
+              </div>
+            </div>
+
+            <!-- Monthly tag volume estimate -->
+            <div class="form-group">
+              <label for="partner-volume" class="form-label"><span>Estimated Monthly Tag Volume</span></label>
+              <select id="partner-volume" class="form-control">
+                <option value="20-50">20 – 50 Tags / month</option>
+                <option value="51-150" selected>51 – 150 Tags / month</option>
+                <option value="151-500">151 – 500 Tags / month</option>
+                <option value="500+">500+ Tags / month (Distributor)</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="partner-message" class="form-label"><span>Brief Message / Questions</span></label>
+              <textarea id="partner-message" class="form-control" rows="3" placeholder="Tell us about your customer footfall or shop location..."></textarea>
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div style="margin:16px 0;">
+              <label style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--text); cursor:pointer;">
+                <input type="checkbox" id="partner-consent" required style="accent-color:var(--primary); margin-top:3px; width:16px; height:16px;">
+                <span>I agree to receive the DEMO START-UP partner welcome kit and accept retail partnership terms.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-cta btn-block" style="padding:14px; font-size:16px;">
+              Submit Partner Application &rarr;
+            </button>
+          </form>
+
+          <!-- SUCCESS STATE -->
+          <div id="partner-success-state" style="display:none; text-align:center; padding:20px 0;">
+            <div style="width:64px; height:64px; border-radius:50%; background:var(--success-light); color:var(--success); display:flex; align-items:center; justify-content:center; margin:0 auto 16px auto; font-size:28px;">
+              ✔
+            </div>
+            <h3 style="color:var(--success); margin-bottom:8px;">Welcome to Partner Hub!</h3>
+            <p style="font-size:15px; color:var(--text); max-width:480px; margin:0 auto 20px auto;">
+              Thank you for applying to the DEMO START-UP auto network. Your Welcome Merchant Kit (Stand + 50 Starter Shields) has been dispatched for review.
+            </p>
+            <div style="background:#fff; border:1px solid var(--border-card); padding:16px; border-radius:var(--radius-md); max-width:420px; margin:0 auto; font-size:13px; text-align:left;">
+              <strong>Direct Partner Support Desk:</strong><br>
+              Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+              Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+            </div>
+            <button type="button" class="btn btn-sand btn-sm" id="btn-reset-partner-form" style="margin-top:16px;">Submit Another Application</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Partner FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Is there any upfront franchise fee or deposit?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>No. Joining the DEMO START-UP network is 100% free with zero security deposit. You simply retail the tags and retain your commission immediately on activation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How are customer activations attributed to my shop?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>Each tag in your merchant kit carries your unique partner prefix. When the vehicle owner scans to link their WhatsApp, your commission is logged instantly in your partner portal.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>When and how do I receive commission payouts?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>Commissions are settled automatically every Tuesday via direct UPI bank transfer or NEFT with GST invoices provided.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-badge" style="align-self:flex-start;">
+            <span class="brand-text">DEMO <span>START-UP</span></span>
+          </div>
+          <p>The privacy-first smart QR vehicle contact system for India. Respectful street communication without exposing personal phone numbers.</p>
+          <div style="font-size:13px; color:var(--text); font-weight:700;">
+            Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+            Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Vehicle Shield</h4>
+          <ul class="footer-links-list">
+            <li><a href="buy.html">Order Twin Pack (₹499)</a></li>
+            <li><a href="scan.html">Simulated QR Scanner</a></li>
+            <li><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html">Wholesale Societies</a></li>
+            <li><a href="partner.html">Partner Program</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Privacy</h4>
+          <ul class="footer-links-list">
+            <li><span class="status-check">✔ DPDP Act 2023 Aligned</span></li>
+            <li><a href="guide.html">Privacy Guarantee</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DEMO START-UP. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chip -->
+  <a href="https://wa.me/919316549161" class="floating-whatsapp-chip" target="_blank" rel="noopener noreferrer" aria-label="Chat with Support on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.581 1.761.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.766-5.767-5.766zm10.17 5.766c0 5.631-4.57 10.201-10.201 10.201-1.787 0-3.483-.464-4.965-1.278l-5.035 1.319 1.344-4.912c-.89-1.533-1.344-3.287-1.344-5.33 0-5.631 4.57-10.201 10.201-10.201 5.631 0 10.2 4.57 10.2 10.201z"/></svg>
+    <span data-i18n="need_help">Need help?</span>
+  </a>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile Bottom Bar">
+    <a href="partner.html" class="mobile-tab-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Partner</span>
+    </a>
+    <a href="wholesale.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Wholesale</span>
+    </a>
+    <a href="blog.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Stories</span>
+    </a>
+    <a href="buy.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Orders</span>
+    </a>
+    <a href="dashboard.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Dashboard</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script src="js/partner.js"></script>
+</body>
+</html>

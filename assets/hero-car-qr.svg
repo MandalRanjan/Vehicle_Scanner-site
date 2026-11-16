@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%" role="img" aria-label="Smart QR Vehicle Shield on Car Windshield">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8F4F8"/>
+      <stop offset="100%" stop-color="#F5FAFF"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#19647E"/>
+      <stop offset="50%" stop-color="#0F4C5C"/>
+      <stop offset="100%" stop-color="#003441"/>
+    </linearGradient>
+    <linearGradient id="windshield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFE7EE" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#A5CEDB" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="stickerShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#1E2A32" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <rect x="0" y="0" width="600" height="420" rx="24" fill="url(#skyGrad)"/>
+  
+  <!-- Road Surface -->
+  <path d="M0 340 Q300 330 600 340 L600 420 L0 420 Z" fill="#EADFCB"/>
+  <path d="M0 365 L600 365" stroke="#FFFFFF" stroke-dasharray="25 20" stroke-width="4"/>
+
+  <!-- Modern Indian SUV / Car Silhouette (Stylized) -->
+  <g transform="translate(40, 90)">
+    <!-- Shadow beneath car -->
+    <ellipse cx="260" cy="245" rx="230" ry="20" fill="#1E2A32" opacity="0.18"/>
+
+    <!-- Car Wheels -->
+    <circle cx="120" cy="225" r="42" fill="#1E2A32"/>
+    <circle cx="120" cy="225" r="26" fill="#6B7C88"/>
+    <circle cx="120" cy="225" r="14" fill="#EADFCB"/>
+
+    <circle cx="400" cy="225" r="42" fill="#1E2A32"/>
+    <circle cx="400" cy="225" r="26" fill="#6B7C88"/>
+    <circle cx="400" cy="225" r="14" fill="#EADFCB"/>
+
+    <!-- Car Main Chassis -->
+    <path d="M40 180 C40 160 70 145 110 140 L160 140 L210 70 C220 56 240 50 265 50 L380 50 C410 50 435 65 450 95 L490 145 C510 150 530 165 530 185 L530 215 C530 225 520 230 505 230 L445 230 C440 205 420 185 395 185 C370 185 350 205 345 230 L175 230 C170 205 150 185 125 185 C100 185 80 205 75 230 L45 230 C35 230 30 220 30 210 Z" fill="url(#carBody)"/>
+
+    <!-- Roof & Windshield Glass -->
+    <path d="M218 75 L175 135 L330 135 L330 65 L245 65 C232 65 224 69 218 75 Z" fill="url(#windshield)"/>
+    <path d="M345 65 L345 135 L475 135 L440 80 C432 70 420 65 405 65 Z" fill="url(#windshield)"/>
+
+    <!-- Headlight Beam (Warm) -->
+    <polygon points="525,170 590,150 590,240 525,200" fill="#FFEDB3" opacity="0.45"/>
+    <rect x="515" y="170" width="16" height="24" rx="4" fill="#FFFFFF"/>
+
+    <!-- Windshield Reflection -->
+    <line x1="240" y1="70" x2="190" y2="130" stroke="#FFFFFF" stroke-width="4" opacity="0.6"/>
+  </g>
+
+  <!-- Large Windshield Magnification View: The QR Kinetic Seal Sticker -->
+  <g transform="translate(230, 40) rotate(-2)" filter="url(#stickerShadow)">
+    <!-- Vinyl Decal Backing -->
+    <rect x="0" y="0" width="190" height="210" rx="20" fill="#FBF6EE" stroke="#0F4C5C" stroke-width="3"/>
+    
+    <!-- Header inside sticker -->
+    <rect x="0" y="0" width="190" height="42" rx="20" fill="#0F4C5C"/>
+    <rect x="0" y="24" width="190" height="18" fill="#0F4C5C"/>
+    <text x="95" y="26" text-anchor="middle" font-family="'Sora', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" letter-spacing="1">DEMO START-UP</text>
+
+    <!-- Simulated High-Contrast QR Code -->
+    <rect x="35" y="52" width="120" height="120" rx="8" fill="#FFFFFF" stroke="#EADFCB" stroke-width="1.5"/>
+    <!-- QR Corner Boxes -->
+    <rect x="43" y="60" width="30" height="30" rx="4" fill="#0F4C5C"/>
+    <rect x="49" y="66" width="18" height="18" rx="2" fill="#FFFFFF"/>
+    <rect x="54" y="71" width="8" height="8" fill="#0F4C5C"/>
+
+    <rect x="117" y="60" width="30" height="30" rx="4" fill="#0F4C5C"/>
+    <rect x="123" y="66" width="18" height="18" rx="2" fill="#FFFFFF"/>
+    <rect x="128" y="71" width="8" height="8" fill="#0F4C5C"/>
+
+    <rect x="43" y="134" width="30" height="30" rx="4" fill="#0F4C5C"/>
+    <rect x="49" y="140" width="18" height="18" rx="2" fill="#FFFFFF"/>
+    <rect x="54" y="145" width="8" height="8" fill="#0F4C5C"/>
+
+    <!-- Data Pixels Pattern -->
+    <rect x="82" y="62" width="6" height="12" fill="#1E2A32"/>
+    <rect x="94" y="70" width="14" height="6" fill="#FF6B4A"/>
+    <rect x="82" y="86" width="26" height="8" fill="#1E2A32"/>
+    <rect x="117" y="100" width="10" height="12" fill="#0F4C5C"/>
+    <rect x="88" y="104" width="12" height="14" fill="#1E2A32"/>
+    <rect x="135" y="118" width="12" height="10" fill="#1E2A32"/>
+    <rect x="82" y="134" width="14" height="14" fill="#2A7261"/>
+    <rect x="106" y="134" width="22" height="8" fill="#1E2A32"/>
+    <rect x="118" y="148" width="18" height="14" fill="#FF6B4A"/>
+    <!-- Center Shield icon inside QR -->
+    <circle cx="95" cy="112" r="14" fill="#FFFFFF" stroke="#0F4C5C" stroke-width="2"/>
+    <path d="M95 104 L91 107 v4 c0 3 2 5.5 4 6.5 2-1 4-3.5 4-6.5v-4 L95 104z" fill="#0F4C5C"/>
+
+    <!-- Bottom label -->
+    <text x="95" y="192" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" font-weight="700" fill="#1E2A32">SCAN TO REACH OWNER</text>
+  </g>
+
+  <!-- Interactive Alert Bubble (Simulated Notification) -->
+  <g transform="translate(380, 160)" filter="url(#stickerShadow)">
+    <rect x="0" y="0" width="190" height="90" rx="16" fill="#FBF6EE" stroke="#2A7261" stroke-width="2"/>
+    <!-- WhatsApp green dot -->
+    <circle cx="24" cy="26" r="10" fill="#2A7261"/>
+    <!-- WhatsApp phone glyph -->
+    <path d="M21 22 C20.5 23 21 24.5 22.5 26 C24 27.5 25.5 28 26.5 27.5 L27.5 26 L25.5 24 L24.5 25 C24 24.8 23.2 24 23 23.5 L24 22.5 Z" fill="#FFFFFF"/>
+    
+    <text x="42" y="24" font-family="'Sora', sans-serif" font-size="12" font-weight="700" fill="#1E2A32">Instant Alert</text>
+    <text x="42" y="38" font-family="'DM Sans', sans-serif" font-size="10" font-weight="700" fill="#2A7261">Your Number Stays 100% Masked</text>
+    <text x="16" y="62" font-family="'DM Sans', sans-serif" font-size="11" fill="#5B6A75">"Car is double-parked at gate..."</text>
+    <rect x="16" y="70" width="70" height="12" rx="6" fill="#FF6B4A"/>
+    <text x="51" y="79" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="8" font-weight="700" fill="#FFFFFF">1-TAP REPLY</text>
+  </g>
+
+  <!-- Badge 1: 100% Privacy Protected -->
+  <g transform="translate(40, 45) rotate(-3)">
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#FBF6EE" stroke="#0F4C5C" stroke-width="1.5" filter="url(#stickerShadow)"/>
+    <circle cx="18" cy="17" r="7" fill="#2A7261"/>
+    <path d="M15 17 L17 19 L21 15" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="32" y="22" font-family="'DM Sans', sans-serif" font-size="11" font-weight="700" fill="#0F4C5C">100% Privacy Protected</text>
+  </g>
+
+  <!-- Badge 2: Verified Vehicle Shield -->
+  <g transform="translate(60, 340) rotate(2.5)">
+    <rect x="0" y="0" width="168" height="34" rx="17" fill="#F5EDE0" stroke="#FF6B4A" stroke-width="1.5" filter="url(#stickerShadow)"/>
+    <circle cx="18" cy="17" r="7" fill="#FF6B4A"/>
+    <polygon points="18,12 20,16 24,17 21,20 22,24 18,22 14,24 15,20 12,17 16,16" fill="#FFFFFF"/>
+    <text x="32" y="22" font-family="'DM Sans', sans-serif" font-size="11" font-weight="700" fill="#AE3115">Verified Vehicle Shield</text>
+  </g>
+</svg>

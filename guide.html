@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Guide & Sticker Care • DEMO START-UP</title>
+  <meta name="description" content="Step-by-step installation instructions, monsoon durability care, and digital E-Tag setup for DEMO START-UP vehicle contact shields.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="DEMO START-UP Home">
+        <div class="brand-badge">
+          <svg class="shield-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+            <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#FBF6EE"/>
+            <rect x="9.5" y="9.5" width="5" height="5" fill="#FF6B4A" rx="1"/>
+          </svg>
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="buy.html" class="nav-link" data-i18n="nav_buy">Buy Shield</a></li>
+          <li><a href="scan.html" class="nav-link" data-i18n="nav_scanner">Scanner Demo</a></li>
+          <li><a href="wholesale.html" class="nav-link" data-i18n="nav_wholesale">Wholesale</a></li>
+          <li><a href="partner.html" class="nav-link" data-i18n="nav_partner">Partner</a></li>
+          <li><a href="guide.html" class="nav-link active" data-i18n="nav_guide">Guide</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="lang-pill-btn" id="lang-sheet-trigger" aria-label="Select Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="current-lang-text">Eng</span>
+        </button>
+
+        <a href="login.html" class="btn btn-outline btn-sm header-login-btn" data-i18n="nav_login">Login</a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-badge">
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+        <button type="button" id="close-drawer-btn" aria-label="Close Navigation" style="background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span>🏠</span> Home</a></li>
+        <li><a href="buy.html" class="drawer-link"><span>🛡️</span> Buy Vehicle Shield</a></li>
+        <li><a href="scan.html" class="drawer-link"><span>📱</span> Scanner Demo</a></li>
+        <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Owner Dashboard</a></li>
+        <li><a href="wholesale.html" class="drawer-link"><span>🏢</span> Wholesale & Societies</a></li>
+        <li><a href="partner.html" class="drawer-link"><span>🤝</span> Partner Program</a></li>
+        <li><a href="guide.html" class="drawer-link active"><span>📖</span> User Guide & Care</a></li>
+        <li><a href="blog.html" class="drawer-link"><span>✍️</span> Blog & Insights</a></li>
+        <li><a href="contact.html" class="drawer-link"><span>📞</span> Contact Support</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="login.html" class="btn btn-outline btn-block">Owner Login</a>
+        <a href="buy.html" class="btn btn-cta btn-block">Get Shield • ₹499</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Selection Bottom Sheet -->
+  <div class="bottom-sheet-backdrop" id="lang-bottom-sheet" role="dialog" aria-modal="true" aria-label="Choose Language">
+    <div class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 style="font-size:18px;">Choose Language</h3>
+        <button type="button" id="close-lang-sheet" style="font-size:20px; color:var(--text-muted); cursor:pointer;">&times;</button>
+      </div>
+      <div class="language-options-grid">
+        <button type="button" class="lang-option-btn selected" data-lang="en">
+          <div><div class="lang-title">English</div><div class="lang-sub">Default Interface</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="hi">
+          <div><div class="lang-title">हिन्दी (Hindi)</div><div class="lang-sub">भारतीय भाषाओं में अलर्ट</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="gu">
+          <div><div class="lang-title">ગુજરાતી (Gujarati)</div><div class="lang-sub">સ્થાનિક ભાષા સપોર્ટ</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="ta">
+          <div><div class="lang-title">தமிழ் (Tamil)</div><div class="lang-sub">பிராந்திய மொழி ஆதரவு</div></div>
+          <span>✔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding: 40px 0 80px 0;">
+    <div class="container" style="max-width: 880px;">
+      
+      <!-- Guide Title & Search -->
+      <div style="text-align:center; margin-bottom: 32px;">
+        <span class="sticker-badge badge-teal">Field Handbook</span>
+        <h1 style="font-size: 32px; margin: 8px 0 10px 0;">Vehicle Shield Installation & Care Guide</h1>
+        <p style="font-size: 15px; color: var(--text-muted); max-width:620px; margin:0 auto 20px auto;">
+          Follow our 3-step application protocol to ensure lifetime adhesion and flawless QR readability under extreme weather.
+        </p>
+
+        <!-- Guide Search Bar -->
+        <div style="position:relative; max-width:500px; margin:0 auto 24px auto;">
+          <input type="text" id="guide-search-input" class="form-control" placeholder="Search guides (e.g. bubbles, removal, e-tag, pressure wash)..." style="padding-left:44px; border-radius:var(--radius-pill); font-size:14px;">
+          <svg style="position:absolute; left:16px; top:15px; width:18px; height:18px; color:var(--text-light);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+
+        <!-- 3 TABS (Install & Care, Buy & Delivery, Account) -->
+        <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;" role="tablist" aria-label="Handbook sections">
+          <button type="button" class="guide-tab-btn btn btn-sand btn-sm active" role="tab" id="tab-install" aria-selected="true" aria-controls="panel-install" data-tab="install" style="padding:8px 18px;">Install & Care</button>
+          <button type="button" class="guide-tab-btn btn btn-sand btn-sm" role="tab" id="tab-delivery" aria-selected="false" aria-controls="panel-delivery" data-tab="delivery" style="padding:8px 18px;">Buy & Delivery</button>
+          <button type="button" class="guide-tab-btn btn btn-sand btn-sm" role="tab" id="tab-account" aria-selected="false" aria-controls="panel-account" data-tab="account" style="padding:8px 18px;">Account & DND</button>
+        </div>
+      </div>
+
+      <!-- TAB 1 CONTENT: INSTALL & CARE -->
+      <div class="guide-tab-panel" id="panel-install" role="tabpanel" aria-labelledby="tab-install">
+        
+        <!-- 3-STEP APPLICATION GUIDE WITH ILLUSTRATIONS -->
+        <div class="card card-cream" style="margin-bottom:32px; border:1.5px solid var(--border-card);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <h2 style="font-size:22px;">3-Step Windshield Application Protocol</h2>
+            <span class="sticker-badge badge-coral">Takes 30 Seconds</span>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px;">
+            <!-- Step 1 -->
+            <div style="background:#fff; padding:18px; border-radius:var(--radius-md); border:1px solid var(--border-card); text-align:center;">
+              <div style="height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
+                <img src="assets/guide-clean.svg" alt="Step 1: Clean glass thoroughly" width="160" height="120" style="margin:0 auto;">
+              </div>
+              <div class="step-badge" style="margin:0 auto 10px auto;">1</div>
+              <h3 style="font-size:16px; margin-bottom:6px;">Clean Glass Surface</h3>
+              <p style="font-size:13px; color:var(--text-muted);">
+                Wipe the inside bottom-left corner of your windshield with a dry microfiber cloth to remove dust, oil film, or moisture.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div style="background:#fff; padding:18px; border-radius:var(--radius-md); border:1px solid var(--border-card); text-align:center;">
+              <div style="height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
+                <img src="assets/guide-peel.svg" alt="Step 2: Peel 3M backing liner" width="160" height="120" style="margin:0 auto;">
+              </div>
+              <div class="step-badge" style="margin:0 auto 10px auto;">2</div>
+              <h3 style="font-size:16px; margin-bottom:6px;">Peel 3M Liner</h3>
+              <p style="font-size:13px; color:var(--text-muted);">
+                Slowly peel the protective backing film from one corner, exposing the high-tack automotive acrylic adhesive.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div style="background:#fff; padding:18px; border-radius:var(--radius-md); border:1px solid var(--border-card); text-align:center;">
+              <div style="height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
+                <img src="assets/guide-press.svg" alt="Step 3: Firmly press onto glass" width="160" height="120" style="margin:0 auto;">
+              </div>
+              <div class="step-badge" style="margin:0 auto 10px auto;">3</div>
+              <h3 style="font-size:16px; margin-bottom:6px;">Firmly Press from Center</h3>
+              <p style="font-size:13px; color:var(--text-muted);">
+                Position the sticker upright on glass. Press firmly outwards from the center to eliminate any micro air pockets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DURABILITY CARDS (Monsoon, UV/Heat, Pressure Wash) -->
+        <h2 style="font-size:20px; margin-bottom:16px;">Engineered Durability Across Indian Conditions</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:18px; margin-bottom:32px;">
+          <div class="card card-cream" style="padding:20px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+              <img src="assets/weather-monsoon.svg" alt="Monsoon Waterproof" width="40" height="40">
+              <strong style="font-size:16px; color:var(--text);">IP68 Monsoon Waterproof</strong>
+            </div>
+            <p style="font-size:13px; color:var(--text-muted);">
+              Sealed with hydrophobic overlaminate. Scannable through heavy rain streaks, wiper moisture, and condensation.
+            </p>
+          </div>
+
+          <div class="card card-cream" style="padding:20px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+              <img src="assets/weather-heat.svg" alt="50C Heat Resistant" width="40" height="40">
+              <strong style="font-size:16px; color:var(--text);">50°C UV & Heat Resistance</strong>
+            </div>
+            <p style="font-size:13px; color:var(--text-muted);">
+              Polymeric vinyl core prevents edge curling, yellowing, and thermal shrinkage under scorching Indian summer heat.
+            </p>
+          </div>
+
+          <div class="card card-cream" style="padding:20px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+              <img src="assets/weather-pressure.svg" alt="Pressure Wash Tested" width="40" height="40">
+              <strong style="font-size:16px; color:var(--text);">Pressure-Wash Tested</strong>
+            </div>
+            <p style="font-size:13px; color:var(--text-muted);">
+              Tested up to 120-bar commercial pressure wash jets. Does not peel away or lift at edges during detailing washes.
+            </p>
+          </div>
+        </div>
+
+        <!-- DIGITAL E-TAG BACKUP STEPS -->
+        <div class="card" style="background:#F2F8F7; border:1.5px solid var(--success); padding:24px; margin-bottom:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
+            <div>
+              <span class="sticker-badge badge-teal" style="font-size:10px;">Digital Backup</span>
+              <h3 style="font-size:18px; margin-top:6px;">Instant Digital E-Tag Backup Steps</h3>
+            </div>
+            <a href="buy.html" class="btn btn-primary btn-sm">Get Digital E-Tag (₹199)</a>
+          </div>
+          <p style="font-size:14px; color:var(--text); margin-bottom:16px;">
+            If you ordered a Digital E-Tag or need a temporary emergency tag while traveling in a rental vehicle:
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; font-size:13px;">
+            <div style="background:#fff; padding:12px; border-radius:var(--radius-sm); border:1px solid rgba(42,114,97,0.2);">
+              <strong>Step 1: Download PDF</strong>
+              <p style="color:var(--text-muted); margin-top:4px;">Log in to your dashboard and download your high-resolution 300 DPI vector PDF.</p>
+            </div>
+            <div style="background:#fff; padding:12px; border-radius:var(--radius-sm); border:1px solid rgba(42,114,97,0.2);">
+              <strong>Step 2: Print & Laminate</strong>
+              <p style="color:var(--text-muted); margin-top:4px;">Print at 100% scale on glossy photo paper or self-adhesive sheet and laminate.</p>
+            </div>
+            <div style="background:#fff; padding:12px; border-radius:var(--radius-sm); border:1px solid rgba(42,114,97,0.2);">
+              <strong>Step 3: Apple / Google Wallet</strong>
+              <p style="color:var(--text-muted); margin-top:4px;">Save the QR card pass to your smartphone lock screen for quick parking displays.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 2 CONTENT: BUY & DELIVERY -->
+      <div class="guide-tab-panel" id="panel-delivery" role="tabpanel" aria-labelledby="tab-delivery" style="display:none;">
+        <div class="card card-cream" style="margin-bottom:32px;">
+          <h2 style="font-size:20px; margin-bottom:12px;">Ordering & Delivery Timeline</h2>
+          <p style="font-size:14px; color:var(--text-muted); margin-bottom:20px;">
+            We ship to every registered pincode in India via India Post SpeedPost and express air couriers (BlueDart / Delhivery).
+          </p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; font-size:14px;">
+            <li style="padding:12px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--border-card);">
+              <strong>Metro Cities (Mumbai, Delhi-NCR, Bengaluru, Pune, Hyderabad, Chennai):</strong> Delivered in 2 to 3 business days.
+            </li>
+            <li style="padding:12px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--border-card);">
+              <strong>Tier-2 & Tier-3 Towns:</strong> Delivered in 4 to 6 business days with live SMS tracking.
+            </li>
+            <li style="padding:12px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--border-card);">
+              <strong>Free Shipping:</strong> All physical Twin Packs (₹499) include 100% free doorstep delivery with zero COD surcharges.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TAB 3 CONTENT: ACCOUNT & DND -->
+      <div class="guide-tab-panel" id="panel-account" role="tabpanel" aria-labelledby="tab-account" style="display:none;">
+        <div class="card card-cream" style="margin-bottom:32px;">
+          <h2 style="font-size:20px; margin-bottom:12px;">Account Controls & Night DND Mode</h2>
+          <p style="font-size:14px; color:var(--text-muted); margin-bottom:20px;">
+            You have full control over when and how strangers can reach you.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:14px;">
+            <div style="background:#fff; padding:14px; border-radius:var(--radius-md); border:1px solid var(--border-card);">
+              <strong>Night DND Hours (11:00 PM – 7:00 AM):</strong>
+              <p style="color:var(--text-muted); font-size:13px; margin-top:4px;">
+                Enable Night DND inside your Dashboard. Routine blocking alerts will be silently queued on WhatsApp without ringing your phone. Only verified Critical Emergency SOS calls will bypass.
+              </p>
+            </div>
+            <div style="background:#fff; padding:14px; border-radius:var(--radius-md); border:1px solid var(--border-card);">
+              <strong>Updating Emergency SOS Contacts:</strong>
+              <p style="color:var(--text-muted); font-size:13px; margin-top:4px;">
+                You can configure up to 3 emergency numbers (spouse, sibling, doctor) and edit your paramedic blood group at any time. Changes sync instantly across the cloud relay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TROUBLESHOOTING FAQ ACCORDIONS -->
+      <h2 style="font-size:22px; margin-bottom:16px;">Troubleshooting & Care FAQs</h2>
+      <div class="faq-accordion-list" style="margin-bottom:40px;">
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What if air bubbles appear under the decal after application?</span>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <p>Our vinyl features micro-channel release technology. Simply wrap a plastic ID card or ATM card with a soft tissue and firmly smooth the bubble outwards toward the nearest edge.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>How do I remove the sticker safely without damaging tinted glass?</span>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <p>Warm the corner gently with a hairdryer or park in direct sun for 10 minutes. Lift one corner and peel smoothly at a 45-degree angle. Clean any residue with rubbing alcohol or soapy water.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Can I stick it on the outside of the windshield?</span>
+            <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <p>We recommend affixing it on the <strong>inside</strong> of the glass facing outwards for maximum longevity against wiper blades, tree sap, and road dust.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STILL NEED HANDS-ON ASSISTANCE? CARD -->
+      <div class="card card-cream" style="border:1.5px solid var(--border-card); padding:28px; text-align:center;">
+        <span class="sticker-badge badge-coral">Direct Human Support</span>
+        <h3 style="font-size:20px; margin:10px 0 6px 0;">Still Need Hands-on Assistance?</h3>
+        <p style="font-size:14px; color:var(--text-muted); max-width:540px; margin:0 auto 20px auto;">
+          Our technical support desk is available on WhatsApp daily from 8:00 AM to 11:00 PM. We typically resolve application questions in under 15 minutes.
+        </p>
+        <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <a href="https://wa.me/919316549161" class="btn btn-cta" target="_blank" rel="noopener">
+            WhatsApp Support: +91 93165 49161
+          </a>
+          <button type="button" id="btn-download-pdf-manual" class="btn btn-outline">
+            Download PDF Manual (2.4 MB)
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-badge" style="align-self:flex-start;">
+            <span class="brand-text">DEMO <span>START-UP</span></span>
+          </div>
+          <p>The privacy-first smart QR vehicle contact system for India. Respectful street communication without exposing personal phone numbers.</p>
+          <div style="font-size:13px; color:var(--text); font-weight:700;">
+            Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+            Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Vehicle Shield</h4>
+          <ul class="footer-links-list">
+            <li><a href="buy.html">Order Twin Pack (₹499)</a></li>
+            <li><a href="scan.html">Simulated QR Scanner</a></li>
+            <li><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html">Wholesale Societies</a></li>
+            <li><a href="partner.html">Partner Program</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Privacy</h4>
+          <ul class="footer-links-list">
+            <li><span class="status-check">✔ DPDP Act 2023 Aligned</span></li>
+            <li><a href="guide.html">Privacy Guarantee</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DEMO START-UP. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chip -->
+  <a href="https://wa.me/919316549161" class="floating-whatsapp-chip" target="_blank" rel="noopener noreferrer" aria-label="Chat with Support on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.581 1.761.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.766-5.767-5.766zm10.17 5.766c0 5.631-4.57 10.201-10.201 10.201-1.787 0-3.483-.464-4.965-1.278l-5.035 1.319 1.344-4.912c-.89-1.533-1.344-3.287-1.344-5.33 0-5.631 4.57-10.201 10.201-10.201 5.631 0 10.2 4.57 10.2 10.201z"/></svg>
+    <span data-i18n="need_help">Need help?</span>
+  </a>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile Bottom Bar">
+    <a href="partner.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Partner</span>
+    </a>
+    <a href="wholesale.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Wholesale</span>
+    </a>
+    <a href="blog.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Stories</span>
+    </a>
+    <a href="buy.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Orders</span>
+    </a>
+    <a href="dashboard.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Dashboard</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Guide Tabs Switching
+      const tabBtns = document.querySelectorAll('.guide-tab-btn');
+      const panels = {
+        install: document.getElementById('panel-install'),
+        delivery: document.getElementById('panel-delivery'),
+        account: document.getElementById('panel-account')
+      };
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          const tab = btn.getAttribute('data-tab');
+
+          Object.keys(panels).forEach(key => {
+            if (panels[key]) {
+              panels[key].style.display = (key === tab) ? 'block' : 'none';
+            }
+          });
+        });
+      });
+
+      // Search Filtering within Guide
+      const guideSearch = document.getElementById('guide-search-input');
+      if (guideSearch) {
+        guideSearch.addEventListener('input', () => {
+          const query = guideSearch.value.toLowerCase().trim();
+          document.querySelectorAll('.faq-item').forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = (!query || text.includes(query)) ? '' : 'none';
+          });
+        });
+      }
+
+      // Download PDF Manual Simulation
+      const pdfBtn = document.getElementById('btn-download-pdf-manual');
+      if (pdfBtn) {
+        pdfBtn.addEventListener('click', () => {
+          window.showToast('Generating official DEMO START-UP User Manual PDF...', 'info');
+          setTimeout(() => {
+            window.print();
+          }, 600);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

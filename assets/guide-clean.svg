@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" width="100%" height="100%" role="img" aria-label="Step 1: Clean glass thoroughly">
+  <rect width="160" height="120" rx="16" fill="#F5EDE0"/>
+  <!-- Windshield Section -->
+  <path d="M20 90 L35 25 L140 25 L125 90 Z" fill="#CFE7EE" stroke="#0F4C5C" stroke-width="2"/>
+  <!-- Microfiber cloth wiping -->
+  <g transform="translate(65, 40) rotate(-10)">
+    <rect x="0" y="0" width="45" height="35" rx="8" fill="#FF6B4A"/>
+    <path d="M8 8 C15 15 25 15 35 8" stroke="#AE3115" stroke-width="2" fill="none"/>
+    <path d="M8 20 C15 26 25 26 35 20" stroke="#AE3115" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Sparkles of cleanliness -->
+  <path d="M35 45 L38 35 L48 38 L38 41 Z" fill="#0F4C5C"/>
+  <path d="M120 40 L123 32 L130 35 L123 38 Z" fill="#0F4C5C"/>
+</svg>

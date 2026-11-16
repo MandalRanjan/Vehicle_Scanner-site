@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Civic Road Insights • DEMO START-UP</title>
+  <meta name="description" content="Explore research, legal guides on DPDP Act 2023, parking etiquette, and vehicle safety protocols for Indian cities.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="DEMO START-UP Home">
+        <div class="brand-badge">
+          <svg class="shield-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+            <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#FBF6EE"/>
+            <rect x="9.5" y="9.5" width="5" height="5" fill="#E8502E" rx="1"/>
+          </svg>
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="buy.html" class="nav-link" data-i18n="nav_buy">Buy Shield</a></li>
+          <li><a href="scan.html" class="nav-link" data-i18n="nav_scanner">Scanner Demo</a></li>
+          <li><a href="wholesale.html" class="nav-link" data-i18n="nav_wholesale">Wholesale</a></li>
+          <li><a href="partner.html" class="nav-link" data-i18n="nav_partner">Partner</a></li>
+          <li><a href="guide.html" class="nav-link" data-i18n="nav_guide">Guide</a></li>
+          <li><a href="blog.html" class="nav-link active" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="lang-pill-btn" id="lang-sheet-trigger" aria-label="Select Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="current-lang-text">Eng</span>
+        </button>
+
+        <a href="login.html" class="btn btn-outline btn-sm header-login-btn" data-i18n="nav_login">Login</a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-badge">
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+        <button type="button" id="close-drawer-btn" aria-label="Close Navigation" style="background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span>🏠</span> Home</a></li>
+        <li><a href="buy.html" class="drawer-link"><span>🛡️</span> Buy Vehicle Shield</a></li>
+        <li><a href="scan.html" class="drawer-link"><span>📱</span> Scanner Demo</a></li>
+        <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Owner Dashboard</a></li>
+        <li><a href="wholesale.html" class="drawer-link"><span>🏢</span> Wholesale & Societies</a></li>
+        <li><a href="partner.html" class="drawer-link"><span>🤝</span> Partner Program</a></li>
+        <li><a href="guide.html" class="drawer-link"><span>📖</span> User Guide & Care</a></li>
+        <li><a href="blog.html" class="drawer-link active"><span>✍️</span> Blog & Insights</a></li>
+        <li><a href="contact.html" class="drawer-link"><span>📞</span> Contact Support</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="login.html" class="btn btn-outline btn-block">Owner Login</a>
+        <a href="buy.html" class="btn btn-cta btn-block">Get Shield • ₹499</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Selection Bottom Sheet -->
+  <div class="bottom-sheet-backdrop" id="lang-bottom-sheet" role="dialog" aria-modal="true" aria-label="Choose Language">
+    <div class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 style="font-size:18px;">Choose Language</h3>
+        <button type="button" id="close-lang-sheet" style="font-size:20px; color:var(--text-muted); cursor:pointer;">&times;</button>
+      </div>
+      <div class="language-options-grid">
+        <button type="button" class="lang-option-btn selected" data-lang="en">
+          <div><div class="lang-title">English</div><div class="lang-sub">Default Interface</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="hi">
+          <div><div class="lang-title">हिन्दी (Hindi)</div><div class="lang-sub">भारतीय भाषाओं में अलर्ट</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="gu">
+          <div><div class="lang-title">ગુજરાતી (Gujarati)</div><div class="lang-sub">સ્થાનિક ભાષા સપોર્ટ</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="ta">
+          <div><div class="lang-title">தமிழ் (Tamil)</div><div class="lang-sub">பிராந்திய மொழி ஆதரவு</div></div>
+          <span>✔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding: 40px 0 80px 0;">
+    <div class="container">
+      
+      <!-- Blog Header & Live Search Bar -->
+      <div style="text-align:center; max-width:720px; margin:0 auto 32px auto;">
+        <span class="sticker-badge badge-teal">Insights & Research</span>
+        <h1 style="font-size:32px; margin:8px 0 10px 0;">Civic Road & Privacy Journal</h1>
+        <p style="font-size:15px; color:var(--text-muted); margin-bottom:24px;">
+          Practical guides on vehicle data privacy, apartment parking disputes, and emergency highway protocols.
+        </p>
+
+        <!-- Live Search Bar -->
+        <div style="position:relative; max-width:540px; margin:0 auto;">
+          <input type="text" id="blog-search-input" class="form-control" placeholder="Search articles by keyword (e.g. DPDP, Towing, Monsoon, Privacy)..." style="padding-left:44px; border-radius:var(--radius-pill); font-size:14px;">
+          <svg style="position:absolute; left:16px; top:15px; width:18px; height:18px; color:var(--text-light);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+
+        <!-- Topic Filter Chips -->
+        <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:16px;">
+          <button type="button" class="blog-topic-chip btn btn-sand btn-sm active" data-topic="all" style="padding:4px 14px;">All Topics</button>
+          <button type="button" class="blog-topic-chip btn btn-sand btn-sm" data-topic="privacy" style="padding:4px 14px;">DPDP & Privacy</button>
+          <button type="button" class="blog-topic-chip btn btn-sand btn-sm" data-topic="parking" style="padding:4px 14px;">Parking Culture</button>
+          <button type="button" class="blog-topic-chip btn btn-sand btn-sm" data-topic="safety" style="padding:4px 14px;">Vehicle Safety</button>
+          <button type="button" class="blog-topic-chip btn btn-sand btn-sm" data-topic="emergency" style="padding:4px 14px;">Road Emergencies</button>
+        </div>
+      </div>
+
+      <!-- FEATURED ARTICLE -->
+      <article class="card card-cream" style="border:2px solid var(--primary); margin-bottom:32px; padding:32px; position:relative;" id="featured-article-card">
+        <span class="sticker-badge badge-coral" style="position:absolute; top:-12px; left:28px;">Featured Deep-Dive</span>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px; font-size:12px; color:var(--text-muted); font-weight:700;">
+          <span class="sticker-badge badge-sand" style="font-size:10px;">DPDP & Privacy</span>
+          <span>• 6 min read</span>
+          <span>• 4.2k Views</span>
+        </div>
+        <h2 style="font-size:24px; line-height:32px; margin-bottom:12px;">
+          Why Leaving Your Phone Number on Your Car Dashboard in India is Dangerous
+        </h2>
+        <p style="font-size:15px; line-height:24px; color:var(--text-muted); margin-bottom:18px;">
+          An investigative look into how roadside marketing agencies, real estate telemarketers, and malicious stalkers photograph handwritten phone numbers from windshields across metro parking lots—and how masked QR protocols safeguard your identity.
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+          <span style="font-size:13px; font-weight:700; color:var(--text);">By DEMO START-UP Civic Research Cell • Updated Nov 2026</span>
+          <button type="button" class="btn btn-primary btn-sm btn-read-article" data-article="featured">Read Full Analysis &rarr;</button>
+        </div>
+      </article>
+
+      <!-- CALLOUT CARD (DPDP Act Statutory Penalty) -->
+      <div class="card" style="background:#FFF9E6; border:1.5px solid #E6B800; padding:20px; border-radius:var(--radius-card-sm); margin-bottom:36px; display:flex; align-items:flex-start; gap:16px;">
+        <div style="font-size:28px; min-width:32px;">⚖️</div>
+        <div>
+          <strong style="color:#806600; font-size:15px; display:block; margin-bottom:4px;">Did You Know? DPDP Act 2023 Statutory Penalties</strong>
+          <p style="font-size:13px; line-height:20px; color:#594700;">
+            Under the Digital Personal Data Protection Act 2023, unauthorized harvesting, commercial scraping, or unsolicited exploitation of citizen contact data carries penalties up to ₹250 Crores. Masked virtual routing ensures vehicle communications stay fully compliant.
+          </p>
+        </div>
+      </div>
+
+      <!-- THREE TOPIC CLUSTERS -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+        <!-- Cluster 1: Privacy & Legal -->
+        <div class="card card-cream" style="padding:22px;">
+          <span class="sticker-badge badge-teal" style="font-size:10px; margin-bottom:10px;">Cluster 01</span>
+          <h3 style="font-size:18px; margin-bottom:8px;">Privacy & DPDP Legal</h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Understand citizen rights under Indian digital privacy laws and masked routing architecture.</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+            <li><button type="button" class="cluster-link-btn" data-topic="privacy" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ What constitutes consent under DPDP Act 2023?</button></li>
+            <li><button type="button" class="cluster-link-btn" data-topic="privacy" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ How masked WhatsApp routing prevents spam</button></li>
+          </ul>
+        </div>
+
+        <!-- Cluster 2: Parking & Civics -->
+        <div class="card card-cream" style="padding:22px;">
+          <span class="sticker-badge badge-coral" style="font-size:10px; margin-bottom:10px;">Cluster 02</span>
+          <h3 style="font-size:18px; margin-bottom:8px;">Parking & Society Civics</h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Best practices for managing shared basements, double parking, and society bye-laws.</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+            <li><button type="button" class="cluster-link-btn" data-topic="parking" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ Resolving society gate disputes without shouting</button></li>
+            <li><button type="button" class="cluster-link-btn" data-topic="parking" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ Traffic police towing procedures in metros</button></li>
+          </ul>
+        </div>
+
+        <!-- Cluster 3: Road Safety & Medical SOS -->
+        <div class="card card-cream" style="padding:22px;">
+          <span class="sticker-badge badge-sand" style="font-size:10px; margin-bottom:10px;">Cluster 03</span>
+          <h3 style="font-size:18px; margin-bottom:8px;">Road Safety & Medical SOS</h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">The golden hour in Indian highway crashes and how QR paramedic data saves lives.</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+            <li><button type="button" class="cluster-link-btn" data-topic="emergency" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ Golden Hour first-aid protocols on Indian expressways</button></li>
+            <li><button type="button" class="cluster-link-btn" data-topic="emergency" style="font-weight:600; text-align:left; color:var(--primary); padding:0; min-height:auto; min-width:auto;">→ Why carrying paramedic blood group on your vehicle matters</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ARTICLES LIST -->
+      <h2 style="font-size:22px; margin-bottom:16px;">Recent Articles & Editorial Guides</h2>
+      <div id="articles-container" style="display:flex; flex-direction:column; gap:14px; margin-bottom:48px;">
+        
+        <!-- Article 1 -->
+        <article class="article-item card card-white" data-topic="parking" style="padding:20px; border:1px solid var(--border-card);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+            <span class="sticker-badge badge-teal" style="font-size:10px;">Parking Culture</span>
+            <span style="font-size:12px; color:var(--text-light);">4 min read • 1.8k views</span>
+          </div>
+          <h3 style="font-size:17px; margin-bottom:6px;">
+            The Anatomy of an Apartment Society Parking Conflict (And How to Fix It)
+          </h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+            A practical analysis of visitor car blocking, security gate bottlenecks, and how modern RWA societies are deploying QR windshield tags to eliminate arguments.
+          </p>
+          <button type="button" class="btn btn-outline btn-sm btn-read-article" data-article="parking" style="font-size:12px; padding:6px 16px;">Read Guide &rarr;</button>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-item card card-white" data-topic="safety" style="padding:20px; border:1px solid var(--border-card);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+            <span class="sticker-badge badge-sand" style="font-size:10px;">Vehicle Safety</span>
+            <span style="font-size:12px; color:var(--text-light);">5 min read • 2.5k views</span>
+          </div>
+          <h3 style="font-size:17px; margin-bottom:6px;">
+            Surviving 50°C Summers: How Windshield Decals Resist Melting & Fading
+          </h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+            The material science behind 3M high-tack automotive vinyl, UV-stabilized ink chemistry, and why ordinary paper stickers disintegrate on Indian dashboards.
+          </p>
+          <button type="button" class="btn btn-outline btn-sm btn-read-article" data-article="safety" style="font-size:12px; padding:6px 16px;">Read Guide &rarr;</button>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-item card card-white" data-topic="emergency" style="padding:20px; border:1px solid var(--border-card);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+            <span class="sticker-badge badge-coral" style="font-size:10px;">Road Emergencies</span>
+            <span style="font-size:12px; color:var(--text-light);">6 min read • 3.1k views</span>
+          </div>
+          <h3 style="font-size:17px; margin-bottom:6px;">
+            The Golden Hour: How Paramedics Utilize Windshield QR Codes at Crash Sites
+          </h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+            When an unconscious driver cannot speak, medical first responders rely on verified blood group and allergy tags to initiate correct blood transfusions without delay.
+          </p>
+          <button type="button" class="btn btn-outline btn-sm btn-read-article" data-article="emergency" style="font-size:12px; padding:6px 16px;">Read Guide &rarr;</button>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-item card card-white" data-topic="privacy" style="padding:20px; border:1px solid var(--border-card);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+            <span class="sticker-badge badge-teal" style="font-size:10px;">DPDP & Privacy</span>
+            <span style="font-size:12px; color:var(--text-light);">3 min read • 1.2k views</span>
+          </div>
+          <h3 style="font-size:17px; margin-bottom:6px;">
+            Virtual Masked Calling: How Telecom Relays Protect Both Caller and Owner
+          </h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+            How our two-way encrypted cloud PBX connects strangers to vehicle owners for urgent blocking alerts without showing either person's actual phone number.
+          </p>
+          <button type="button" class="btn btn-outline btn-sm btn-read-article" data-article="privacy" style="font-size:12px; padding:6px 16px;">Read Guide &rarr;</button>
+        </article>
+
+      </div>
+
+      <!-- NEWSLETTER SIGNUP SECTION -->
+      <section class="card card-cream" id="newsletter-signup" style="text-align:center; padding:36px 20px; border:1.5px solid var(--border-card); max-width:640px; margin:0 auto;">
+        <span class="sticker-badge badge-coral">Stay Safe & Informed</span>
+        <h2 style="font-size:22px; margin:10px 0 6px 0;">Join the DEMO START-UP Civic Safety Digest</h2>
+        <p style="font-size:14px; color:var(--text-muted); margin-bottom:20px;">
+          Monthly updates on Indian road safety guidelines, DPDP legal advisories, and urban parking best practices. Zero spam.
+        </p>
+        <form id="blog-newsletter-form" style="display:flex; gap:10px; max-width:440px; margin:0 auto; flex-wrap:wrap;">
+          <input type="email" id="newsletter-email" class="form-control" placeholder="Enter your email address" required style="flex:1; min-width:220px;">
+          <button type="submit" class="btn btn-cta">Subscribe Free</button>
+        </form>
+        <div id="newsletter-success-msg" style="display:none; margin-top:12px; font-size:13px; color:var(--success); font-weight:700;">
+          ✔ Thank you for subscribing! You are now subscribed to the Civic Safety Digest.
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- NATIVE ARTICLE READING MODAL -->
+  <dialog id="blog-reading-modal" aria-labelledby="reading-modal-title" style="max-width:640px; max-height:85vh; overflow-y:auto;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid var(--border-card); padding-bottom:12px;">
+      <span class="sticker-badge badge-teal" id="modal-category-badge">Article Preview</span>
+      <button type="button" id="btn-close-reading-modal" style="font-size:22px; color:var(--text-muted); cursor:pointer;">&times;</button>
+    </div>
+    <h2 id="reading-modal-title" style="font-size:22px; margin-bottom:8px; line-height:28px;"></h2>
+    <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;" id="modal-meta"></div>
+    <div id="reading-modal-body" style="font-size:14px; line-height:24px; color:var(--text); margin-bottom:24px;"></div>
+    <button type="button" class="btn btn-sand btn-block" id="btn-close-reading-bottom">Close Article</button>
+  </dialog>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-badge" style="align-self:flex-start;">
+            <span class="brand-text">DEMO <span>START-UP</span></span>
+          </div>
+          <p>The privacy-first smart QR vehicle contact system for India. Respectful street communication without exposing personal phone numbers.</p>
+          <div style="font-size:13px; color:var(--text); font-weight:700;">
+            Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+            Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Vehicle Shield</h4>
+          <ul class="footer-links-list">
+            <li><a href="buy.html">Order Twin Pack (₹499)</a></li>
+            <li><a href="scan.html">Simulated QR Scanner</a></li>
+            <li><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html">Wholesale Societies</a></li>
+            <li><a href="partner.html">Partner Program</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Privacy</h4>
+          <ul class="footer-links-list">
+            <li><span class="status-check">✔ DPDP Act 2023 Aligned</span></li>
+            <li><a href="guide.html">Privacy Guarantee</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DEMO START-UP. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chip -->
+  <a href="https://wa.me/919316549161" class="floating-whatsapp-chip" target="_blank" rel="noopener noreferrer" aria-label="Chat with Support on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.581 1.761.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.766-5.766-5.766zm10.17 5.766c0 5.631-4.57 10.201-10.201 10.201-1.787 0-3.483-.464-4.965-1.278l-5.035 1.319 1.344-4.912c-.89-1.533-1.344-3.287-1.344-5.33 0-5.631 4.57-10.201 10.201-10.201 5.631 0 10.2 4.57 10.2 10.201z"/></svg>
+    <span data-i18n="need_help">Need help?</span>
+  </a>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile Bottom Bar">
+    <a href="partner.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Partner</span>
+    </a>
+    <a href="wholesale.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Wholesale</span>
+    </a>
+    <a href="blog.html" class="mobile-tab-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Stories</span>
+    </a>
+    <a href="buy.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Orders</span>
+    </a>
+    <a href="dashboard.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Dashboard</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('blog-search-input');
+      const topicChips = document.querySelectorAll('.blog-topic-chip');
+      const articles = document.querySelectorAll('.article-item');
+      let activeTopic = 'all';
+
+      // Article full text mock data for reader modal
+      const ARTICLE_TEXTS = {
+        featured: {
+          title: "Why Leaving Your Phone Number on Your Car Dashboard in India is Dangerous",
+          category: "DPDP & Privacy",
+          meta: "6 min read • Published by DEMO START-UP Research Cell",
+          body: `
+            <p><strong>The Street Scraping Phenomenon:</strong> Every day across metropolitan parking spots, unauthorized marketing aggregators walk through commercial basements photographing phone numbers placed on car dashboards. These numbers are compiled into targeted datasets and sold to loan agents, insurance callers, and spam networks.</p>
+            <p><strong>Personal Harassment & Safety Risks:</strong> For women commuters driving alone, leaving a personal mobile number exposed on glass creates severe harassment and stalking vulnerabilities.</p>
+            <p><strong>The DPDP Act 2023 Solution:</strong> India's new data protection laws mandate purpose limitation and explicit user consent. By replacing raw phone numbers with encrypted QR tags linked to virtual cloud relays, car owners can be contacted respectfully without revealing a single digit of their personal phone number.</p>
+          `
+        },
+        parking: {
+          title: "The Anatomy of an Apartment Society Parking Conflict (And How to Fix It)",
+          category: "Parking Culture",
+          meta: "4 min read • Urban Living Insights",
+          body: `
+            <p>Parking conflicts account for over 40% of residential RWA committee complaints. Double parking, blocked visitor bays, and basement disputes frequently escalate into public shouting matches.</p>
+            <p>Smart QR vehicle tags provide a quiet, diplomatic communication channel. Neighbors scan the tag and send a polite WhatsApp notification like "Please move vehicle", resolving the blockage in under 5 minutes without security guard intervention.</p>
+          `
+        },
+        safety: {
+          title: "Surviving 50°C Summers: How Windshield Decals Resist Melting & Fading",
+          category: "Vehicle Safety",
+          meta: "5 min read • Material Science",
+          body: `
+            <p>Standard paper stickers deteriorate in weeks under peak Indian summer heat. Surface temperatures on car windshields frequently exceed 70°C in Delhi, Ahmedabad, and Jaipur.</p>
+            <p>DEMO START-UP decals utilize high-grade polymeric vinyl with cross-linked acrylic adhesive and UV-inhibitor topcoats, ensuring 5+ years of scannability through scorching heat, monsoon humidity, and automated car washes.</p>
+          `
+        },
+        emergency: {
+          title: "The Golden Hour: How Paramedics Utilize Windshield QR Codes at Crash Sites",
+          category: "Road Emergencies",
+          meta: "6 min read • Highway Safety Protocol",
+          body: `
+            <p>The first 60 minutes after a severe road accident—known as the Golden Hour—determine survival rates. Unconscious accident victims often cannot identify themselves or communicate critical medical conditions.</p>
+            <p>When first responders scan a DEMO START-UP emergency tag, they instantly view paramedic-approved medical data: blood group, drug allergies (e.g. Penicillin), and 3 immediate family contacts with direct dial buttons.</p>
+          `
+        },
+        privacy: {
+          title: "Virtual Masked Calling: How Telecom Relays Protect Both Caller and Owner",
+          category: "DPDP & Privacy",
+          meta: "3 min read • Cloud PBX Architecture",
+          body: `
+            <p>How does a stranger call you if they cannot see your phone number? The secret lies in our private virtual telephone exchange.</p>
+            <p>When the stranger taps "Place Masked Call", our cloud switchboard dials both parties simultaneously and bridges the audio stream. Both phone screens show the DEMO START-UP verified business number, preserving end-to-end anonymity.</p>
+          `
+        }
+      };
+
+      function filterArticles() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        articles.forEach(art => {
+          const title = art.querySelector('h3').textContent.toLowerCase();
+          const desc = art.querySelector('p').textContent.toLowerCase();
+          const topic = art.getAttribute('data-topic');
+
+          const matchesTopic = (activeTopic === 'all' || topic === activeTopic);
+          const matchesQuery = (!query || title.includes(query) || desc.includes(query));
+
+          art.style.display = (matchesTopic && matchesQuery) ? 'block' : 'none';
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+      }
+
+      topicChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          topicChips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          activeTopic = chip.getAttribute('data-topic');
+          filterArticles();
+        });
+      });
+
+      // Cluster buttons click filter
+      document.querySelectorAll('.cluster-link-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const topic = btn.getAttribute('data-topic');
+          topicChips.forEach(c => {
+            c.classList.toggle('active', c.getAttribute('data-topic') === topic);
+          });
+          activeTopic = topic;
+          filterArticles();
+          const list = document.getElementById('articles-container');
+          if (list) list.scrollIntoView({ behavior: 'smooth' });
+          window.showToast(`Filtered articles by ${topic.toUpperCase()}`, 'info');
+        });
+      });
+
+      // Reading Modal Logic
+      const modal = document.getElementById('blog-reading-modal');
+      const modalTitle = document.getElementById('reading-modal-title');
+      const modalCat = document.getElementById('modal-category-badge');
+      const modalMeta = document.getElementById('modal-meta');
+      const modalBody = document.getElementById('reading-modal-body');
+      const closeTop = document.getElementById('btn-close-reading-modal');
+      const closeBottom = document.getElementById('btn-close-reading-bottom');
+
+      document.querySelectorAll('.btn-read-article').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-article') || 'featured';
+          const data = ARTICLE_TEXTS[key] || ARTICLE_TEXTS.featured;
+
+          if (modal && modalTitle && modalBody) {
+            modalTitle.textContent = data.title;
+            if (modalCat) modalCat.textContent = data.category;
+            if (modalMeta) modalMeta.textContent = data.meta;
+            modalBody.innerHTML = data.body;
+            modal.showModal();
+          }
+        });
+      });
+
+      const closeModal = () => { if (modal) modal.close(); };
+      if (closeTop) closeTop.addEventListener('click', closeModal);
+      if (closeBottom) closeBottom.addEventListener('click', closeModal);
+
+      // Newsletter Form
+      const newsletterForm = document.getElementById('blog-newsletter-form');
+      const newsletterSuccess = document.getElementById('newsletter-success-msg');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('newsletter-email').value.trim();
+          if (email) {
+            newsletterForm.style.display = 'none';
+            if (newsletterSuccess) newsletterSuccess.style.display = 'block';
+            window.showToast('Subscribed to Civic Safety Digest!', 'success');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

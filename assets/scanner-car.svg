@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%" role="img" aria-label="White SUV with Masked Number Plate MH 02 8820">
+  <defs>
+    <linearGradient id="carPaint" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F2F5F8"/>
+      <stop offset="100%" stop-color="#D7E0E7"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFE7EE"/>
+      <stop offset="100%" stop-color="#98C3D2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="320" height="180" rx="18" fill="#FBF6EE"/>
+  
+  <!-- Road shadow -->
+  <ellipse cx="160" cy="154" rx="125" ry="12" fill="#1E2A32" opacity="0.14"/>
+
+  <!-- Front View SUV Body -->
+  <g transform="translate(40, 20)">
+    <!-- Roof & Windshield -->
+    <path d="M50 32 L68 6 C70 3 74 1 78 1 L162 1 C166 1 170 3 172 6 L190 32 Z" fill="url(#glassGrad)" stroke="#0F4C5C" stroke-width="2"/>
+    
+    <!-- Windshield QR sticker in top left corner -->
+    <rect x="76" y="8" width="14" height="16" rx="2" fill="#FBF6EE" stroke="#0F4C5C" stroke-width="1"/>
+    <rect x="78" y="10" width="10" height="10" fill="#0F4C5C"/>
+    
+    <!-- Rearview mirror inside -->
+    <rect x="114" y="6" width="12" height="4" rx="1.5" fill="#1E2A32"/>
+
+    <!-- Main Front Grille & Hood -->
+    <path d="M35 32 L205 32 C216 32 225 40 228 50 L234 85 C236 94 230 102 220 102 L20 102 C10 102 4 94 6 85 L12 50 C15 40 24 32 35 32 Z" fill="url(#carPaint)" stroke="#1E2A32" stroke-width="2"/>
+
+    <!-- Left & Right Headlights -->
+    <path d="M16 48 L46 44 L44 58 L14 56 Z" fill="#FFEDB3" stroke="#1E2A32" stroke-width="1.5"/>
+    <path d="M224 48 L194 44 L196 58 L226 56 Z" fill="#FFEDB3" stroke="#1E2A32" stroke-width="1.5"/>
+
+    <!-- Radiator Grille -->
+    <rect x="65" y="44" width="110" height="28" rx="6" fill="#1E2A32"/>
+    <line x1="72" y1="52" x2="168" y2="52" stroke="#6B7C88" stroke-width="2"/>
+    <line x1="72" y1="58" x2="168" y2="58" stroke="#6B7C88" stroke-width="2"/>
+    <line x1="72" y1="64" x2="168" y2="64" stroke="#6B7C88" stroke-width="2"/>
+
+    <!-- Lower Bumper & Fog Lamps -->
+    <rect x="25" y="90" width="190" height="28" rx="8" fill="#19242B"/>
+    <circle cx="45" cy="102" r="6" fill="#FFD166"/>
+    <circle cx="195" cy="102" r="6" fill="#FFD166"/>
+
+    <!-- Side Mirrors -->
+    <path d="M10 36 L0 32 C-2 30 -2 26 1 24 L10 24 Z" fill="#FFFFFF" stroke="#1E2A32" stroke-width="1.5"/>
+    <path d="M230 36 L240 32 C242 30 242 26 239 24 L230 24 Z" fill="#FFFFFF" stroke="#1E2A32" stroke-width="1.5"/>
+
+    <!-- Tires visible from front -->
+    <rect x="18" y="102" width="22" height="28" rx="4" fill="#1E2A32"/>
+    <rect x="200" y="102" width="22" height="28" rx="4" fill="#1E2A32"/>
+
+    <!-- Masked Number Plate -->
+    <g transform="translate(75, 84)">
+      <rect x="0" y="0" width="90" height="22" rx="4" fill="#FFFFFF" stroke="#1E2A32" stroke-width="1.5"/>
+      <rect x="2" y="2" width="8" height="18" fill="#0F4C5C" rx="2"/>
+      <text x="6" y="14" font-family="'Sora', sans-serif" font-size="6" font-weight="700" fill="#FFFFFF" text-anchor="middle">IND</text>
+      <text x="14" y="15" font-family="'Sora', monospace" font-size="9" font-weight="800" fill="#1E2A32" letter-spacing="1">MH 02 ▪▪ 8820</text>
+    </g>
+  </g>
+</svg>

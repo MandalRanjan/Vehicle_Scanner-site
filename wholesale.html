@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesale & Society Bulk Portal • DEMO START-UP</title>
+  <meta name="description" content="Order smart QR vehicle stickers in bulk for residential societies, commercial corporate parks, and fleet managers. Volume tiers from ₹139/tag.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="DEMO START-UP Home">
+        <div class="brand-badge">
+          <svg class="shield-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 6v6c0 6.5 4 12 9 14 5-2 9-7.5 9-14V6l-9-4z" fill="#0F4C5C"/>
+            <path d="M12 5L5 8.2v4.8c0 4.8 3 8.9 7 10.4 4-1.5 7-5.6 7-10.4V8.2L12 5z" fill="#FBF6EE"/>
+            <rect x="9.5" y="9.5" width="5" height="5" fill="#FF6B4A" rx="1"/>
+          </svg>
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="buy.html" class="nav-link" data-i18n="nav_buy">Buy Shield</a></li>
+          <li><a href="scan.html" class="nav-link" data-i18n="nav_scanner">Scanner Demo</a></li>
+          <li><a href="wholesale.html" class="nav-link active" data-i18n="nav_wholesale">Wholesale</a></li>
+          <li><a href="partner.html" class="nav-link" data-i18n="nav_partner">Partner</a></li>
+          <li><a href="guide.html" class="nav-link" data-i18n="nav_guide">Guide</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="lang-pill-btn" id="lang-sheet-trigger" aria-label="Select Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="current-lang-text">Eng</span>
+        </button>
+
+        <a href="login.html" class="btn btn-outline btn-sm header-login-btn" data-i18n="nav_login">Login</a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-badge">
+          <span class="brand-text">DEMO <span>START-UP</span></span>
+        </div>
+        <button type="button" id="close-drawer-btn" aria-label="Close Navigation" style="background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;">&times;</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link"><span>🏠</span> Home</a></li>
+        <li><a href="buy.html" class="drawer-link"><span>🛡️</span> Buy Vehicle Shield</a></li>
+        <li><a href="scan.html" class="drawer-link"><span>📱</span> Scanner Demo</a></li>
+        <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Owner Dashboard</a></li>
+        <li><a href="wholesale.html" class="drawer-link active"><span>🏢</span> Wholesale & Societies</a></li>
+        <li><a href="partner.html" class="drawer-link"><span>🤝</span> Partner Program</a></li>
+        <li><a href="guide.html" class="drawer-link"><span>📖</span> User Guide & Care</a></li>
+        <li><a href="blog.html" class="drawer-link"><span>✍️</span> Blog & Insights</a></li>
+        <li><a href="contact.html" class="drawer-link"><span>📞</span> Contact Support</a></li>
+      </ul>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="login.html" class="btn btn-outline btn-block">Owner Login</a>
+        <a href="buy.html" class="btn btn-cta btn-block">Get Shield • ₹499</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language Selection Bottom Sheet -->
+  <div class="bottom-sheet-backdrop" id="lang-bottom-sheet" role="dialog" aria-modal="true" aria-label="Choose Language">
+    <div class="bottom-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 style="font-size:18px;">Choose Language</h3>
+        <button type="button" id="close-lang-sheet" style="font-size:20px; color:var(--text-muted); cursor:pointer;">&times;</button>
+      </div>
+      <div class="language-options-grid">
+        <button type="button" class="lang-option-btn selected" data-lang="en">
+          <div><div class="lang-title">English</div><div class="lang-sub">Default Interface</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="hi">
+          <div><div class="lang-title">हिन्दी (Hindi)</div><div class="lang-sub">भारतीय भाषाओं में अलर्ट</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="gu">
+          <div><div class="lang-title">ગુજરાતી (Gujarati)</div><div class="lang-sub">સ્થાનિક ભાષા સપોર્ટ</div></div>
+          <span>✔</span>
+        </button>
+        <button type="button" class="lang-option-btn" data-lang="ta">
+          <div><div class="lang-title">தமிழ் (Tamil)</div><div class="lang-sub">பிராந்திய மொழி ஆதரவு</div></div>
+          <span>✔</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div style="text-align:center; max-width:800px; margin:0 auto;">
+          <div style="display:flex; justify-content:center; gap:8px; margin-bottom:12px;">
+            <span class="sticker-badge badge-teal">Society & Commercial Parks</span>
+            <span class="sticker-badge badge-coral">Volume Discounts From ₹139</span>
+          </div>
+          <h1 style="font-size:36px; line-height:44px; margin-bottom:14px;">
+            Institutional Vehicle Shields for Residential RWA Societies & Corporate Fleets
+          </h1>
+          <p style="font-size:16px; line-height:26px; color:var(--text-muted); margin-bottom:24px;">
+            Eliminate double-parking shouting matches, blockages at society barrier gates, and security guard friction. Custom co-branded QR decals with centralized administrative analytics.
+          </p>
+          <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a href="#invoice-form-section" class="btn btn-cta">Request Proforma Invoice &rarr;</a>
+            <a href="#volume-tiers-section" class="btn btn-outline">Explore Volume Tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUME TIERS SECTION -->
+    <section class="section section-cream" id="volume-tiers-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Tiered Pricing</span>
+          <h2>Bulk Volume Discount Tiers</h2>
+          <p>Transparent wholesale pricing with full GST tax invoice breakdown and free delivery.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter Batch -->
+          <div class="wholesale-tier-card pricing-card" data-tier="starter" style="cursor:pointer;">
+            <span class="sticker-badge badge-sand" style="align-self:flex-start;">Small Societies</span>
+            <h3 style="margin-top:10px;">Starter Batch</h3>
+            <p>Ideal for standalone residential wings and independent housing layouts (50 – 199 tags).</p>
+            <div class="price-display">
+              <span class="price-amount">₹249</span>
+              <span style="font-size:14px; color:var(--text-muted);">/ tag</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                50 to 199 Physical Twin Packs
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Standard DEMO START-UP Branding
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Free Expedited Air Courier
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                GST Tax Invoice Included
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline btn-block">Select Starter Batch</button>
+          </div>
+
+          <!-- Tier 2: Pro Society Pack (Most Popular) -->
+          <div class="wholesale-tier-card pricing-card featured selected" data-tier="society" style="cursor:pointer;">
+            <span class="popular-ribbon">Most Popular</span>
+            <span class="sticker-badge badge-teal" style="align-self:flex-start;">Gated Communities</span>
+            <h3 style="margin-top:10px;">Pro Society Pack</h3>
+            <p>Designed for large apartment complexes with 200 – 999 flats and multiple gates.</p>
+            <div class="price-display">
+              <span class="price-amount">₹189</span>
+              <span style="font-size:14px; color:var(--text-muted);">/ tag</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                200 to 999 Co-Branded Shields
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Society Name / Wing Crest Laser-Engraved
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated RWA Security Admin Portal
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Free Display Stands for Society Office
+              </li>
+            </ul>
+            <button type="button" class="btn btn-cta btn-block">Select Pro Society Pack</button>
+          </div>
+
+          <!-- Tier 3: Fleet Master / District Rights -->
+          <div class="wholesale-tier-card pricing-card" data-tier="fleet" style="cursor:pointer;">
+            <span class="sticker-badge badge-sand" style="align-self:flex-start;">1,000+ Units</span>
+            <h3 style="margin-top:10px;">Fleet Master Tier</h3>
+            <p>Tailored for municipal authorities, taxi associations, delivery fleets, and corporate parks.</p>
+            <div class="price-display">
+              <span class="price-amount">₹139</span>
+              <span style="font-size:14px; color:var(--text-muted);">/ tag</span>
+            </div>
+            <ul class="price-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                1,000+ Volume Custom Production
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom Webhook & Fleet API Integration
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated Enterprise Account Manager
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom Packaging & Direct Mailer Options
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline btn-block">Select Fleet Master</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM SOCIETY & BRAND INTEGRATION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Brand Customization</span>
+          <h2>Custom Society & Corporate Brand Integration</h2>
+          <p>Turn essential parking compliance into a cohesive branded experience.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🏷️</span></div>
+            <div>
+              <h4>Society Co-Branding</h4>
+              <p>Print your residential society name, crest, or housing association emblem directly on the upper header of every decal.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🚪</span></div>
+            <div>
+              <h4>Security Gate Pass Integration</h4>
+              <p>Security guards can scan the sticker to instantly verify whether a car belongs to a registered resident or unauthorized visitor.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🔢</span></div>
+            <div>
+              <h4>Custom Society Prefix</h4>
+              <p>Tags can be serialized with your society wing and flat numbering (e.g., #PALM-A-402) for frictionless physical identification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTERPRISE ECOSYSTEM READY -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Enterprise Ready</span>
+          <h2>Enterprise Ecosystem Ready</h2>
+          <p>Built for scale with robust administration, reporting, and automated billing.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">📁</span></div>
+            <div>
+              <h4>CSV Bulk Registration</h4>
+              <p>Upload your resident vehicle database via Excel/CSV. We pre-link tags before delivery so residents just stick and go.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">📊</span></div>
+            <div>
+              <h4>Central RWA Dashboard</h4>
+              <p>Society committee members get anonymized metrics on parking disputes, resolved blocking alerts, and active vehicle counts.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><span style="font-size:24px;">🧾</span></div>
+            <div>
+              <h4>Automated GST Proforma</h4>
+              <p>Instant formal quotations, tax invoices, and payment receipts compatible with RWA accounting and audit procedures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST WHOLESALE PROFORMA INVOICE FORM -->
+    <section class="section" id="invoice-form-section">
+      <div class="container" style="max-width:760px;">
+        <div class="section-header">
+          <span class="sticker-badge badge-coral">Instant Tax Quotation</span>
+          <h2>Request Wholesale Proforma Invoice</h2>
+          <p>Receive a formal invoice with GST breakdown and sample kit dispatched within 24 hours.</p>
+        </div>
+
+        <div class="card card-cream" style="border:1.5px solid var(--border-card); padding:32px;">
+          <form id="wholesale-inquiry-form">
+            <!-- Volume Tier Dropdown -->
+            <div class="form-group">
+              <label for="wholesale-tier-select" class="form-label"><span>Selected Volume Tier *</span></label>
+              <select id="wholesale-tier-select" class="form-control" required>
+                <option value="starter">Starter Batch: 50 – 199 Tags (₹249/tag)</option>
+                <option value="society" selected>Pro Society Pack: 200 – 999 Tags (₹189/tag - Most Popular)</option>
+                <option value="fleet">Fleet Master: 1,000+ Tags (₹139/tag)</option>
+              </select>
+            </div>
+
+            <!-- Society / Company Name -->
+            <div class="form-group">
+              <label for="ws-company" class="form-label"><span>Society / Corporate Company Name *</span></label>
+              <input type="text" id="ws-company" class="form-control" placeholder="Palm Meadows Co-operative Housing Society Ltd." required>
+            </div>
+
+            <!-- GSTIN & Contact Person -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="ws-gstin" class="form-label"><span>GSTIN (Optional)</span></label>
+                <input type="text" id="ws-gstin" class="form-control" placeholder="27AAACG0000A1Z5" style="text-transform:uppercase;">
+              </div>
+              <div class="form-group">
+                <label for="ws-person" class="form-label"><span>Authorized Contact Person *</span></label>
+                <input type="text" id="ws-person" class="form-control" placeholder="Rajesh Mehta (Secretary)" required>
+              </div>
+            </div>
+
+            <!-- WhatsApp & Email -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="ws-phone" class="form-label"><span>WhatsApp Contact Number *</span></label>
+                <div class="phone-input-group">
+                  <span class="phone-prefix">🇮🇳 +91</span>
+                  <input type="tel" id="ws-phone" class="form-control" placeholder="98765 43210" maxlength="10" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ws-email" class="form-label"><span>Official Work Email *</span></label>
+                <input type="email" id="ws-email" class="form-control" placeholder="secretary@palmmeadows.org" required>
+              </div>
+            </div>
+
+            <!-- Pincode and City/State -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="ws-pincode" class="form-label"><span>Delivery Pincode *</span></label>
+                <input type="text" id="ws-pincode" class="form-control" placeholder="400050" maxlength="6" required>
+              </div>
+              <div class="form-group">
+                <label for="ws-city" class="form-label"><span>City & State</span></label>
+                <input type="text" id="ws-city" class="form-control" placeholder="Mumbai, Maharashtra">
+              </div>
+            </div>
+
+            <!-- Special Requirements -->
+            <div class="form-group">
+              <label for="ws-notes" class="form-label"><span>Special Customization / Gate Pass Notes</span></label>
+              <textarea id="ws-notes" class="form-control" rows="3" placeholder="Number of flats, gate security protocol, or custom logo details..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-cta btn-block" style="padding:14px; font-size:16px;">
+              Generate & Email Proforma Invoice &rarr;
+            </button>
+          </form>
+
+          <!-- SUCCESS STATE -->
+          <div id="wholesale-success-state" style="display:none; text-align:center; padding:20px 0;">
+            <div style="width:64px; height:64px; border-radius:50%; background:var(--success-light); color:var(--success); display:flex; align-items:center; justify-content:center; margin:0 auto 16px auto; font-size:28px;">
+              ✔
+            </div>
+            <h3 style="color:var(--success); margin-bottom:8px;">Proforma Invoice Generated!</h3>
+            <p style="font-size:15px; color:var(--text); max-width:480px; margin:0 auto 20px auto;">
+              The official quotation and payment wire instructions have been emailed to your address. A complimentary sample kit is also queued for dispatch.
+            </p>
+            <div style="background:#fff; border:1px solid var(--border-card); padding:16px; border-radius:var(--radius-md); max-width:420px; margin:0 auto; font-size:13px; text-align:left;">
+              <strong>Direct Institutional Desk:</strong><br>
+              Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+              Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+            </div>
+            <button type="button" class="btn btn-sand btn-sm" id="btn-reset-wholesale-form" style="margin-top:16px;">Request Another Proforma Invoice</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="sticker-badge badge-teal">Society FAQ</span>
+          <h2>Wholesale Questions Answered</h2>
+        </div>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can we co-brand the decals with our society's name and crest?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>Yes. For orders of 200+ units (Pro Society Pack), custom laser-printing of your residential society name or company crest is included at zero extra charge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How do residents link their phone numbers to their tags?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>Residents simply scan the physical tag with their camera upon receiving it, enter their mobile number, and verify with a 6-digit WhatsApp OTP in 30 seconds. Alternatively, we can pre-link via your master CSV register.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What is the payment process for institutional RWA orders?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>We issue a formal Proforma Tax Invoice with full GSTIN details. Societies can settle via official bank NEFT/RTGS transfer or cheque, followed by immediate tax receipt generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-badge" style="align-self:flex-start;">
+            <span class="brand-text">DEMO <span>START-UP</span></span>
+          </div>
+          <p>The privacy-first smart QR vehicle contact system for India. Respectful street communication without exposing personal phone numbers.</p>
+          <div style="font-size:13px; color:var(--text); font-weight:700;">
+            Phone / WhatsApp: <a href="tel:+919316549161">+91 93165 49161</a><br>
+            Email: <a href="mailto:mr7763510@gmail.com">mr7763510@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Vehicle Shield</h4>
+          <ul class="footer-links-list">
+            <li><a href="buy.html">Order Twin Pack (₹499)</a></li>
+            <li><a href="scan.html">Simulated QR Scanner</a></li>
+            <li><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html">Wholesale Societies</a></li>
+            <li><a href="partner.html">Partner Program</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Privacy</h4>
+          <ul class="footer-links-list">
+            <li><span class="status-check">✔ DPDP Act 2023 Aligned</span></li>
+            <li><a href="guide.html">Privacy Guarantee</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DEMO START-UP. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chip -->
+  <a href="https://wa.me/919316549161" class="floating-whatsapp-chip" target="_blank" rel="noopener noreferrer" aria-label="Chat with Support on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.581 1.761.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.766-5.767-5.766zm10.17 5.766c0 5.631-4.57 10.201-10.201 10.201-1.787 0-3.483-.464-4.965-1.278l-5.035 1.319 1.344-4.912c-.89-1.533-1.344-3.287-1.344-5.33 0-5.631 4.57-10.201 10.201-10.201 5.631 0 10.2 4.57 10.2 10.201z"/></svg>
+    <span data-i18n="need_help">Need help?</span>
+  </a>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile Bottom Bar">
+    <a href="partner.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span>Partner</span>
+    </a>
+    <a href="wholesale.html" class="mobile-tab-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Wholesale</span>
+    </a>
+    <a href="blog.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>Stories</span>
+    </a>
+    <a href="buy.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Orders</span>
+    </a>
+    <a href="dashboard.html" class="mobile-tab-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Dashboard</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script src="js/wholesale.js"></script>
+</body>
+</html>
